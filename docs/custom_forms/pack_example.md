@@ -1,3 +1,4 @@
-请参考源码中的`custom_form_pack_example`目录
+Please refer to the `custom_form_pack_example` directory in the source code.
 
-资源包与数据包是分开的。资源包负责定义形态模型，而数据包负责定义形态能力。两者需要同时应用
+The resource pack and data pack are separate. The resource pack handles form model definitions, while the data pack handles form ability definitions. Both need to be applied simultaneously.
+
