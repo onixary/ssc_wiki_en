@@ -1,3 +1,5 @@
+# Custom Models Using Origin Furs Data-Driven Approach
+
 The mod implements custom models for different forms based on [Origin Furs](https://modrinth.com/mod/origin-furs) logic. Form models should be easily migratable from other Blockbench character models.
 
 To add custom models for specific forms, please refer to the [Origin Furs documentation](https://originalfur.readthedocs.io/en/latest/) and the Blockbench project files in the `3d_models` directory of the source code.
