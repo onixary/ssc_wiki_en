@@ -44,7 +44,7 @@ To obtain these empty form states through brewing:
 
 - Customize models for any empty or existing form, including soft bone effects
 - Customize abilities for any empty or existing form
-- Modify form descriptions in the Shape Shifter's Codex via localization files
+- Modify form descriptions in the Book of Shape Shifter via localization files
 
 **Currently unavailable via resource packs/data packs:**
 
