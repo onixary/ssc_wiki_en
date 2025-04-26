@@ -1,3 +1,5 @@
+# Custom Form Abilities Using Origins Data-Driven Approach
+
 The mod uses [Origins](https://modrinth.com/mod/origins) logic to define different abilities for various forms. In other words, each form corresponds to a separate origin in Origins.
 
 To define abilities for custom forms, please refer to the [Origins documentation](https://origins.readthedocs.io/en/latest/).
