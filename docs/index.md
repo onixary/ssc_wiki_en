@@ -1,5 +1,7 @@
 # Welcome to the Shape Shifter Curse Wiki Documentation
 
+### 这一文档也有[简体中文版本](https://ssc-wiki.readthedocs.io/zh-cn/latest/)
+
 **Shape Shifter Curse** is a Minecraft Java Edition mod developed for the Fabric loader.  
 
 This mod allows players to gradually transform into different forms based on vanilla creatures under the influence of the "Cursed Moon" and "Instincts" mechanics, gaining their unique abilities and drawbacks.  
