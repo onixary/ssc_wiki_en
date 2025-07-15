@@ -8,6 +8,8 @@ Throughout your gameplay, the `Book of Shape Shifter` serves as an essential too
 
 ### Lost the Book of Shape Shifter?
 
+![](../img/book_receipe.png)
+
 You can craft a new one at any time using `Untreated Moondust` + `Book`.
 
 `Untreated Moondust` can be obtained during the `Cursed Moon Event`. For detailed information, please refer to the Cursed Moon Event documentation.

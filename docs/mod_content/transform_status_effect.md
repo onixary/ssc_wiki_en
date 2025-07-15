@@ -31,14 +31,17 @@ Most forms have an associated brewable potion that grants their transformation e
 
 Brewing form potions requires following these steps:  
 
-**Synthesize the Moondust Matrix item**  
-img  
+**Crafting the Moondust Matrix item**  
 
-**Brew Moondust Potion using Moondust Matrix**  
-img  
+![](../img/moondust_matrix_receipe.png)
+
+**Brew Moondust Potion using Moondust Matrix And Awkward Potion**  
+
+![](../img/moondust_potion_brew.png)
 
 **Brew Form Potion using Moondust Potion**  
-img  
+
+![](../img/form_potion_brew.png)
 
 ### Current Form Potion Recipes:  
 - `Moondust Potion` + `Dripstone` = `Bat Form Potion`  
