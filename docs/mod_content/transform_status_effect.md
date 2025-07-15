@@ -1,65 +1,53 @@
-# 获取形态变化效果
+# Obtaining Transformation Status Effects
 
-要变成新的形态，首先您需要获取被称为`形态变化效果`的mod效果
+To transform into a new form, you must first obtain the mod's `Transformation Status Effect`.  
 
-目前，这一效果可以通过`特殊生物实体`与`药水炼制`的方式来获得
+Currently, this effect can be obtained through `Special Entity Mobs` or `Potion Brewing`.  
 
-只有处于`初始形态`（即开启mod内容之后的默认形态）时，你才可以获取这些效果
+You can only obtain these effects while in `Initial Form` (the default form after enabling mod content).  
 
-在获取`形态变化效果`之后，在床上睡眠以触发形态变化
+After obtaining a `Transformation Status Effect`, sleep in a bed to trigger the transformation.
 
-# 特殊生物实体
+# Special Entity Mobs
 
-在世界中，有概率生成有特殊外观与粒子效果的`特殊生物实体`。它们的外观呈现银白色调，应该非常好辨认
+Special mob entities with unique appearances and particle effects may spawn in the world. These mobs have a distinctive silver-white coloration and should be easily recognizable.  
 
-每种`特殊生物实体`会对应特定的一种形态效果
+Each `Special Entity Mob` corresponds to a specific transformation effect.  
 
-在`初始形态`时，靠近`特殊生物实体`就有概率获取它们所对应的形态效果
+While in `Initial Form`, approaching these entities has a chance to grant you their corresponding transformation effect.  
 
-你也可以使用其对应的刷怪蛋生成它们
+You can also spawn them using their respective spawn eggs.
 
-### 目前的特殊生物实体清单：
+### Current Special Entity Mobs:  
+- `Cursed Bat` → Bat Form effect  
+- `Cursed Axolotl` → Axolotl Form effect  
+- `Cursed Ocelot` → Ocelot Form effect  
 
-- `咒文蝙蝠 `→ 蝙蝠形态效果
+# Potion Brewing
 
-- `咒文美西螈` → 美西螈形态效果
+Beyond encountering `Special Entity Mobs`, you can also brew potions corresponding to specific forms.  
 
-- `咒文豹猫 `→ 豹猫形态效果
+Most forms have an associated brewable potion that grants their transformation effect.  
 
-# 药水炼制
+Brewing form potions requires following these steps:  
 
-除了借助`特殊生物实体`以外，你也可以通过药水炼制的方式炼制对应形态
+**Synthesize the Moondust Matrix item**  
+img  
 
-大部分形态都会对应一种可以让你获取对应形态效果的药水
+**Brew Moondust Potion using Moondust Matrix**  
+img  
 
-炼制形态药水需要遵循以下步骤：
+**Brew Form Potion using Moondust Potion**  
+img  
 
-**合成月尘基质物品**
+### Current Form Potion Recipes:  
+- `Moondust Potion` + `Dripstone` = `Bat Form Potion`  
+- `Moondust Potion` + `Small Dripleaf` = `Axolotl Form Potion`  
+- `Moondust Potion` + `Raw Chicken` = `Ocelot Form Potion`  
+- `Moondust Potion` + `Amethyst Shard` = `Allay Form Potion`  
+- `Moondust Potion` + `Cod bucket` = `Feral Cat Form Potion`  
 
-img
+### Special Potion Exception:  
+You need the `Familiar Fox Form Potion` to obtain the Familiar Fox transformation effect, but this potion cannot be brewed.  
 
-**使用月尘基质炼制月尘药水**
-
-img
-
-**再次使用月尘药水炼制形态药水**
-
-img
-
-### 目前的形态药水配方：
-
-- `月尘药水` + `滴水石锥` = `蝙蝠形态药水`
-
-- `月尘药水` + `小型垂滴叶` = `美西螈形态药水`
-
-- `月尘药水` + `鸡肉` = `豹猫形态药水`
-
-- `月尘药水` + `紫水晶碎片` = `悦灵形态药水`
-
-- `月尘药水` + `鲑鱼桶` = `野性猫之形态药水`
-
-### 特殊的药水：
-
-你需要`狐之使魔形态药水`来获取使魔红狐的形态效果，不过这一药水不能被炼制
-
-取而代之的是，当你以`初始形态`遭遇女巫时，女巫将有概率向你投掷这一药水，从而让你获取形态效果。同时，女巫也有可能掉落`狐之使魔形态溅射药水`
+Instead, when encountering witches while in `Initial Form`, witches have a chance to throw this potion at you, granting the effect. Additionally, witches may drop `Splash Familiar Fox Potion`.

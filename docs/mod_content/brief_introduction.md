@@ -1,9 +1,9 @@
-# 一句话玩法
+# Brief Introduction
 
-本模组允许玩家在“诅咒之月”与“本能”机制的影响下，逐渐转变成基于原版生物设计的不同形态，并获取它们特有的能力与劣势
+This mod allows players to gradually transform into different forms based on vanilla Minecraft creature designs, under the influence of the "Cursed Moon" and "Instinct" mechanics, while gaining their unique abilities and disadvantages.
 
-每种形态都有独立的模型与以及（可能的）特殊动画，其能力与劣势也经过设计与平衡，来尽可能在尊重游戏原本体验的情形下添加有趣的特色
+Each form features its own distinct model and (where applicable) special animations. The abilities and disadvantages are carefully designed and balanced to add interesting characteristics while respecting the original game experience.
 
+---
 
-
-**注意：这一章节的内容包含剧透。为了游玩体验，您应该只在游玩过程中产生疑问时阅读其对应的内容**
+**Note: This section contains spoilers. For the best gameplay experience, only consult specific parts when you encounter questions during your playthrough.**

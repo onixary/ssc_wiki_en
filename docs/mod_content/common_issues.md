@@ -1,45 +1,34 @@
-### FAQ：
+### FAQ:
 
-**我的角色皮肤被替换了？**
+**My character skin got replaced?**  
+After enabling the mod content, the player's character skin will be replaced by the mod's built-in character skin (aka. the shifter). This is done to maintain artistic consistency for the form models and respect the original character designs of other players.
 
-在开启mod内容之后，玩家的角色皮肤将被替换为mod内置的角色皮肤(aka: the shifter)，这是出于形态模型的美术一致性，以及尊重他人角色的考虑
+You can retain your own skin by using the in-game command: `/shape-shifter-curse keep_original_skin true`
 
-你可以通过游戏中的指令`/shape-shifter-curse keep_original_skin true`来使用你自己的皮肤
+**Does it work on multiplayer servers?**  
+Yes!  
+After version 1.0.5, the mod has achieved full server compatibility. If you encounter any problems, please submit an issue report.
 
-**它是否适用于服务器？**
+**I don't like the firstPerson visual effect**  
+Different forms feature their own unique animations. To display these animations properly in first-person perspective and enhance immersion, firstPerson is included as a dependency.  
 
-是的！
+You can press the assigned key (default: F6) to temporarily switch to vanilla first-person view, or disable it completely in the mod settings. Please note that disabling this may cause mismatches between the first-person model and your current form model (this issue currently has no solution).
 
-在1.0.5版本后，mod已经实现了服务器兼容。如果您发现了问题，请提issue
+**Can I create custom forms?**  
+Yes. While there are some limitations, you can customize your own forms using data packs combined with resource packs. This includes custom models, unique abilities, instinct system modifications, and descriptive text.  
 
-**我不喜欢firstPerson的第一人称效果**
+Please refer to the wiki documentation and examples in the source code repository.
 
-不同形态会有自己的特有动画。为了在第一人称表现这些动画，增强沉浸感，firstPerson会作为mod的依赖项
+**How do I transform into other forms?**  
+During the mod's progression system, you can obtain transformation clues through the achievement system and crafting recipes.  
+If you still have questions after this, please consult the wiki documentation.
 
-你可以按下按键（默认为F6）临时切换到原版的第一人称，或是直接在mod设置中将其关闭。不过会出现第一人称模型与形态模型不匹配的问题（我暂时还没法解决这个）
+**Are any forms permanent?**  
+Several permanently retained forms were added starting from version 1.0.4.  
+Please refer to the mod documentation for specific details.
 
-**我可以自定义自己的形态么？**
+**I accidentally lost the Book of Shape Shifter**  
+You can craft a new one using Untreated Moondust + Book.
 
-是的。虽然有一点限制，不过你可以通过数据包+资源包的方式来自定义属于自己的形态，包括模型、特有能力、instinct变化与描述文本
-
-请参考wiki文档与源码中的示例
-
-**我要怎么变成其他形态？**
-
-在mod流程中，你可以通过成就系统与合成表来获取相关提示 
-
-如果仍有疑问，请参考wiki文档
-
-**某个形态是永久性的么？**
-
-1.0.4版本之后添加了几个永久保持的形态
-
-请参考mod文档
-
-**我不小心遗失了幻形者之书**
-
-你可以使用未加工的月尘+书本重新合成
-
-**这个mod是SFW的么？**
-
-当然！
+**Is this mod SFW?**  
+Absolutely!

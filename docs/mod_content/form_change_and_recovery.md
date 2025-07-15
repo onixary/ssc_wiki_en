@@ -1,53 +1,38 @@
-在世界中，有多种物品与事件可以影响你当前的形态
+Various items and events in the world can affect your current form.
 
-# 影响形态的物品
+# Form-Affecting Items
 
-### 月尘基质
+### Moondust Matrix  
+img  
+The `Moondust Matrix` is the core ingredient for brewing `Form Potions` and crafting other related items.  
 
-img
+`Untreated Moondust` drops from mobs during `Cursed Moon Events`.
 
-`月尘基质`是炼制`形态药水`以及合成其他相关物品的核心物品
+### Catalyst  
+img  
+Significantly increases your current `Instinct Value`.
 
-`未加工的月尘`会在`诅咒之月`期间从生物身上掉落
+### Inhibitor  
+img  
+When in stages 1 or 2 of a `Progressive Form`, or when in a `Special Form`, using this will revert your form by one stage.
 
-### 催化剂
+### Resonance Catalyst  
+img  
+For `Progressive Forms` that include a `Permanent Form`: Use this at stage 3 to transform into the corresponding permanent form.
 
-img
+### Potent Inhibitor  
+img  
+Similar to the Inhibitor, but effective on stage 3 of `Progressive Forms`.
 
-大幅增加你当前的`本能值`
+# Cursed Moon Event
 
-### 抑制剂
+img  
+The `Cursed Moon Event` may periodically trigger during nighttime hours. This is a global event affecting all players.  
 
-img
+For versions 1.0.5 and above, the triggering mechanism uses conditional probability with an expected occurrence every 3 in-game days. Due to probability fluctuations, the actual timing may vary.  
 
-在处于`阶段变化形态`的1,2阶段，或者处于`特殊形态`时使用，将你的形态回退一个阶段
-
-### 共鸣催化剂
-
-img
-
-对于某个包含`永久形态`的`阶段变化形态`而言，在形态的第3阶段使用来变成对应的永久形态
-
-### 强效抑制剂
-
-img
-
-与抑制剂相似，不过它可以对`阶段变化形态`的第3阶段生效
-
-# 诅咒之月事件
-
-img
-
-每隔一段时间，当时间处于夜晚时可能会触发`诅咒之月事件`。这一事件是全局的
-
-对于1.0.5版本以上的版本，`诅咒之月事件`的触发方式修改为了条件概率触发，其概率期望应为每3天触发一次。由于概率的不确定性，具体时间可能会有波动
-
-`诅咒之月事件`会持续一整夜。这一事件会造成一系列影响：
-
-- 生物会掉落`未加工的月尘`
-
-- 当处于`初始形态`时，你的形态会随机变为某个`阶段变化形态`的第一阶段，`诅咒之月事件`结束即复原
-
-- 当处于`阶段变化形态`的1,2阶段时，你的形态会暂时增加一个阶段，`诅咒之月事件`结束即复原
-
-- 当处于`阶段变化形态`的第3阶段时，你的形态会暂时恢复到这一形态的第1阶段，`诅咒之月事件`结束即复原。这也是您使用`抑制剂`复原的机会
+The `Cursed Moon Event` lasts throughout the entire night and causes the following effects:  
+- Mobs drop `Untreated Moondust`  
+- When in `Initial Form`: Your form will randomly change to stage 1 of a `Progressive Form`, reverting when the event ends  
+- When in stages 1 or 2 of a `Progressive Form`: Your form will temporarily advance one stage, reverting when the event ends  
+- When in stage 3 of a `Progressive Form`: Your form will temporarily revert to stage 1 of that form, reverting when the event ends. This provides an opportunity to use `Inhibitors` for recovery.

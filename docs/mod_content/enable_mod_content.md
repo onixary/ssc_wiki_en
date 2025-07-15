@@ -1,13 +1,13 @@
-# 概览
+# Overview
 
-在安装mod并第一次进入游戏时，您会获取一个名为`幻形者之书`的可使用物品
+After installing the mod and entering the game for the first time, you will receive a usable item called the `Book of Shape Shifter`.
 
-点击右键使用，并选择`打开幻形者之书`将会为您开启mod的内容
+Right-click to use it and select `Open Book of Shape Shifter` to enable the mod's content.
 
-在之后的游玩中，`幻形者之书`也是用于确认您当前所处形态的介绍、优势与劣势、以及本能信息的重要道具
+Throughout your gameplay, the `Book of Shape Shifter` serves as an essential tool for reviewing your current form's introduction, advantages and disadvantages, as well as instinct system information.
 
-### 不慎丢失了幻形者之书？
+### Lost the Book of Shape Shifter?
 
-您可以随时使用`未处理的月尘`\+`书`合成一个新的
+You can craft a new one at any time using `Untreated Moondust` + `Book`.
 
-`未处理的月尘`可以在`诅咒之月`事件期间获取，详细请参考诅咒之月事件
+`Untreated Moondust` can be obtained during the `Cursed Moon Event`. For detailed information, please refer to the Cursed Moon Event documentation.

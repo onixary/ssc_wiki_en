@@ -1,69 +1,56 @@
-# 形态种类
+# Form Types
 
-在mod中，您可以变成的形态会被分为阶段变化形态、特殊形态与永久形态三种
+The forms you can transform into are categorized as Progressive Forms, Special Forms, and Permanent Forms.
 
-# 阶段变化形态
+# Progressive Forms
 
-`阶段变化形态`具有多个逐渐变化的阶段形态。对于`阶段变化形态`而言，随着`本能值`的累积，您的形态将会进入下一个阶段
+`Progressive Forms` feature multiple progressive stages. For these forms, as your `Instinct Value` accumulates, your form will advance to the next stage.  
 
-对于某个形态，相较于前期阶段而言，后期阶段的优势与劣势都会更加明显，对于游戏体验的改变也会更加突出
+Compared to earlier stages, later stages exhibit more pronounced advantages and disadvantages, creating more significant changes to gameplay experience.
 
-当处于`阶段变化形态`时，你的形态会受到`诅咒之月事件`的影响
+Your form will be affected by `Cursed Moon Events` when in a Progressive Form.
 
-mod中的大部分形态属于这一类别
+Most forms in the mod belong to this category.
 
-### 本能系统
+### Instinct System  
+img  
+The `Instinct System` progress bar appears in the center of the screen, just below the experience bar. It indicates your current `Instinct Value` level.  
 
-img
+`Instinct Value` increases slowly over time. Additionally, each form has corresponding `Instinct Behaviors` that trigger rapid increases in instinct when performed.  
 
-`本能系统`的进度条位于屏幕正中，经验槽的下方。它指示您当前`本能值`的大小
+When `Instinct Value` reaches maximum, your form will advance to the next stage.
 
-`本能值`会随时间缓慢增加。除此之外，每个形态都有其对应的`本能行为`，触发这些行为也会导致`本能值`迅速增加
+### Progressive Forms List  
+- Ocelot Form stages 1, 2, and 3  
+- Axolotl Form  
+- Bat Form  
+- Familiar Fox Form stages 1, 2, and 3
 
-当`本能值`涨满时，您的形态将进入下一个阶段
+# Special Forms
 
-### 渐进式形态列表
+`Special Forms` have no progressive stages. They are not affected by the `Cursed Moon Event`.  
 
-- 豹猫形态的1,2,3阶段
+While in a `Special Form`, you can use an `Inhibitor` at any time to revert to your initial form.
 
-- 美西螈形态
+### Special Forms List  
+- Allay Form  
+- Feral Cat Form
 
-- 蝙蝠形态
+# Permanent Forms
 
-- 使魔红狐形态的1,2,3阶段
+`Permanent Forms` represent the final stages of certain `Progressive Forms`.  
 
-# 特殊形态
+For eligible `Progressive Forms`, use a `Resonance Catalyst` at stage 3 to transform into the corresponding permanent form.
 
-`特殊形态`不存在阶段。它也不会受到`诅咒之月`的影响
+**Important Warning: Once transformed into a Permanent Form, there are no in-game mechanics to revert this change. Proceed with caution!**
 
-在`特殊形态`时，您可以随时使用一剂`抑制剂`来恢复到初始形态
+!!! note  
+    Q: I regret my decision! Are there really no other solutions?  
+    A: Yes, there are options! With administrator permissions, you can use the command:  
+    `/shape-shifter-curse transform_to_form` to set your form.  
+    Alternatively, you can delete your character data file located at:  
+    `<world_name>\data\shape-shifter-curse` (file named with your UUID) to restore your form to the state before enabling mod content.
 
-### 特殊形态列表
-
-- 悦灵形态
-
-- 野性猫之形态
-
-# 永久形态
-
-`永久形态`是一些`阶段变化形态`的最终阶段
-
-对于某个包含`永久形态`的`阶段变化形态`而言，在形态的第3阶段，使用一剂`共鸣催化剂`来变成对应的永久形态
-
-
-
-**注意：一旦变成某个永久形态，就没有任何游戏内的机制可以将其恢复，请谨慎行事**
-
-!!! note
-
-    Q: 我后悔了！真的没有其它办法了么？
-
-    A: 有的兄弟有的，在管理员权限下，您可以使用指令 /shape-shifter-curse transform_to_form 来设定形态。另外，您也可以删除<world_name>\\data\\shape-shifter-curse 路径下您UUID对应的存档文件来恢复启用mod内容前的形态
-
-### 永久形态列表
-
-- 豹猫形态的第4阶段
-
-- 使魔红狐形态的第4阶段
-
-
+### Permanent Forms List  
+- Ocelot Form stage 4  
+- Familiar Fox Form stage 4
