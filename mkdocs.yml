@@ -1,6 +1,16 @@
 site_name: Shape Shifter Curse Wiki
 nav:
     - Home: index.md
+    - Versions:
+        - Update Logs: update_log/update_log.md
+    - Mod Content Guide: 
+        - Brief Introduction: mod_content/brief_introduction.md
+        - Enable Mod Content: mod_content/enable_mod_content.md
+        - Transform Status Effect: mod_content/transform_status_effect.md
+        - Form Types: mod_content/form_types.md
+        - Form Change And Recovery: mod_content/form_change_and_recovery.md
+        - In Game Commands: mod_content/commands.md
+        - FAQ: mod_content/common_issues.md
     - Creating Custom Forms:
         - Overview: custom_forms/overview.md
         - Resource Pack/Data Pack Example: custom_forms/pack_example.md
