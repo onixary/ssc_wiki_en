@@ -20,7 +20,7 @@ When in stages 1 or 2 of a `Progressive Form`, or when in a `Special Form`, usin
 img  
 For `Progressive Forms` that include a `Permanent Form`: Use this at stage 3 to transform into the corresponding permanent form.
 
-### Potent Inhibitor  
+### Powerful Inhibitor  
 img  
 Similar to the Inhibitor, but effective on stage 3 of `Progressive Forms`.
 
