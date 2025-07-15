@@ -40,7 +40,7 @@ While in a `Special Form`, you can use an `Inhibitor` at any time to revert to y
 
 `Permanent Forms` represent the final stages of certain `Progressive Forms`.  
 
-For eligible `Progressive Forms`, use a `Resonance Catalyst` at stage 3 to transform into the corresponding permanent form.
+For eligible `Progressive Forms`, use a `Echo Catalyst` at stage 3 to transform into the corresponding permanent form.
 
 **Important Warning: Once transformed into a Permanent Form, there are no in-game mechanics to revert this change. Proceed with caution!**
 

@@ -16,7 +16,7 @@ Significantly increases your current `Instinct Value`.
 img  
 When in stages 1 or 2 of a `Progressive Form`, or when in a `Special Form`, using this will revert your form by one stage.
 
-### Resonance Catalyst  
+### Echo Catalyst  
 img  
 For `Progressive Forms` that include a `Permanent Form`: Use this at stage 3 to transform into the corresponding permanent form.
 
