@@ -42,3 +42,15 @@ Migration is now complete.
 **Form Mechanism Improvements**  
 - Axolotl mechanics optimized based on player feedback for improved engagement  
 - Adjusted instinct triggers for several forms to create more natural progression
+
+### 1\.0.51
+
+Now (theoretically) compatible with Geckolib mod
+
+Fixed Cursed Moon event frequency - enforced minimum 2-day interval between triggers
+
+Removed false "Origins mod required" server join prompt
+
+ocelot_2/3 evasion: Extended to all projectiles (was arrows only)
+
+familiar_fox_1: Added missing cooldown to Energy Drain power
