@@ -13,7 +13,9 @@ Your form will be affected by `Cursed Moon Events` when in a Progressive Form.
 Most forms in the mod belong to this category.
 
 ### Instinct System  
-img  
+
+![](../img/instinct_bar.png)
+
 The `Instinct System` progress bar appears in the center of the screen, just below the experience bar. It indicates your current `Instinct Value` level.  
 
 `Instinct Value` increases slowly over time. Additionally, each form has corresponding `Instinct Behaviors` that trigger rapid increases in instinct when performed.  
