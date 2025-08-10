@@ -54,3 +54,25 @@ Removed false "Origins mod required" server join prompt
 ocelot_2/3 evasion: Extended to all projectiles (was arrows only)
 
 familiar_fox_1: Added missing cooldown to Energy Drain power
+
+### 1\.0.52
+
+Players forms can now correctly determine the edibility of food types from the Farmer's Delight mod
+
+Fixed an issue where the Traveler's Backpack would disappear when placed on the ground in certain forms
+
+Fixed cases where transformative mobs would replace original mobs
+
+Limited the degree of FOV distortion caused by speed modifications to optimize the experience
+
+The ocelot_2/ocelot_3 forms can now sweeping with bare-paw attacks
+
+To ensure server compatibility, the mandatory dependency on the FirstPerson mod has been removed. It is no longer required to install the FirstPerson mod alongside the server installation
+
+### 1\.0.53
+
+Critical Fix: Resolved a bug where certain edible foods would fail to function properly when the Farmer's Delight mod was not installed
+
+New Feature: familiar_fox 2/3 can now use empty bottles on Villagers / Illagers / Witches to craft Satiety Potions, improving survival gameplay in mob-scarce environments
+
+Balance Adjustment: Instinct now gradually increases when the transformed form is within its preferred biome
