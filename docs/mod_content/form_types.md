@@ -27,6 +27,7 @@ When `Instinct Value` reaches maximum, your form will advance to the next stage.
 - Axolotl Form  
 - Bat Form  
 - Familiar Fox Form stages 1, 2, and 3
+- Snow Fox Form stages 1, 2, and 3
 
 # Special Forms
 
@@ -55,4 +56,7 @@ For eligible `Progressive Forms`, use a `Echo Catalyst` at stage 3 to transform 
 
 ### Permanent Forms List  
 - Ocelot Form stage 4  
+- Bat Form stage 4  
 - Familiar Fox Form stage 4
+- Snow Fox Form stage 4
+

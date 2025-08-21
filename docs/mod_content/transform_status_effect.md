@@ -54,3 +54,5 @@ Brewing form potions requires following these steps:
 You need the `Familiar Fox Form Potion` to obtain the Familiar Fox transformation effect, but this potion cannot be brewed.  
 
 Instead, when encountering witches while in `Initial Form`, witches have a chance to throw this potion at you, granting the effect. Additionally, witches may drop `Splash Familiar Fox Potion`.
+
+Snow Fox form, as a variant of Familiar Fox form, it's form potion can not brewed directly either. Instead, you'll need to use a `Golden Nugget` to purify `Splash Familiar Fox Potion` in Brewing Stand to obtain `Splash Snow Fox Potion`.

@@ -76,3 +76,18 @@ Critical Fix: Resolved a bug where certain edible foods would fail to function p
 New Feature: familiar_fox 2/3 can now use empty bottles on Villagers / Illagers / Witches to craft Satiety Potions, improving survival gameplay in mob-scarce environments
 
 Balance Adjustment: Instinct now gradually increases when the transformed form is within its preferred biome
+
+### 1\.0.6
+
+This update introduces a four-stage Snow Fox Progressive Form and one Permanent Bat Form.
+
+Snow Fox Form:
+This form is a variant of the Familiar Fox, representing a more "pure" version of the fox form.
+You cannot brew this form’s potion directly. Instead, collect the Familiar Fox Potion (dropped occasionally by witches) and purify it in a brewing stand using a gold nugget.
+"Leaping" is the core mechanic of this form.
+
+Permanent Bat Form:
+The fourth stage of the Bat Form
+New mechanics include clinging and hanging upside-down—making it even more batty.
+
+Additionally, several bug fixes and mechanic optimizations have been implemented.
