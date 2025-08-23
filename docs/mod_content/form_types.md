@@ -25,7 +25,7 @@ When `Instinct Value` reaches maximum, your form will advance to the next stage.
 ### Progressive Forms List  
 - Ocelot Form stages 1, 2, and 3  
 - Axolotl Form  
-- Bat Form  
+- Bat Form stages 1, 2, and 3 
 - Familiar Fox Form stages 1, 2, and 3
 - Snow Fox Form stages 1, 2, and 3
 

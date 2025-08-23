@@ -44,7 +44,7 @@ Similar to the Inhibitor, but effective on stage 3 of `Progressive Forms`.
 
 The `Cursed Moon Event` may periodically trigger during nighttime hours. This is a global event affecting all players.  
 
-For versions 1.0.5 and above, the triggering mechanism uses conditional probability with an expected occurrence every 3 in-game days. Due to probability fluctuations, the actual timing may vary.  
+For versions 1.0.6 and above, the Curse Moon event has been set to trigger at fixed lunar phases. The trigger interval is between 2-3 days (the previous triggering method had way too many bugs!).
 
 The `Cursed Moon Event` lasts throughout the entire night and causes the following effects:  
 - Mobs drop `Untreated Moondust`  
