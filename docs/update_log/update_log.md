@@ -91,3 +91,17 @@ The fourth stage of the Bat Form
 New mechanics include clinging and hanging upside-down—making it even more batty.
 
 Additionally, several bug fixes and mechanic optimizations have been implemented.
+
+### 1\.0.62
+
+Thanks to the generous contributions of GitHub contributor [@xu233333](https://github.com/xu233333), this minor update delivers significant experience improvements.
+
+- Fixed a bug where tipped arrows brewed from modded potions failed to take effect.
+
+- Completed vanilla first-person adaptation. Form models now display correctly without requiring the FirstPerson mod (though we still recommend FirstPerson mod for enhanced immersion).
+
+- Refactored the Shapeshifter's Guidebook UI logic using vanilla APIs, removing internal dependencies on owo-lib for better compatibility.
+
+- Spawn probabilities for Cursed Creatures are now configurable. See [wiki](https://ssc-wiki.readthedocs.io/en/latest/mod_content/mod_config/) for details.
+
+- Added missing descriptions for the \`snow_fox\` form.
