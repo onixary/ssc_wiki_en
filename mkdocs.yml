@@ -9,6 +9,7 @@ nav:
         - Transform Status Effect: mod_content/transform_status_effect.md
         - Form Types: mod_content/form_types.md
         - Form Change And Recovery: mod_content/form_change_and_recovery.md
+        - Mod Config: mod_content/mod_config.md
         - In Game Commands: mod_content/commands.md
         - FAQ: mod_content/common_issues.md
     - Creating Custom Forms:
