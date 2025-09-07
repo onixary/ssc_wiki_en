@@ -10,9 +10,7 @@ Yes!
 After version 1.0.5, the mod has achieved full server compatibility. If you encounter any problems, please submit an issue report.
 
 **I don't like the firstPerson visual effect**  
-Different forms feature their own unique animations. To display these animations properly in first-person perspective and enhance immersion, firstPerson is included as a dependency.  
-
-You can press the assigned key (default: F6) to temporarily switch to vanilla first-person view, or disable it completely in the mod settings. Please note that disabling this may cause mismatches between the first-person model and your current form model (this issue currently has no solution).
+After version 1.0.62, form models can display correctly without FirstPerson mod(though we still recommend FirstPerson mod for enhanced immersion).
 
 **Can I create custom forms?**  
 Yes. While there are some limitations, you can customize your own forms using data packs combined with resource packs. This includes custom models, unique abilities, instinct system modifications, and descriptive text.  
