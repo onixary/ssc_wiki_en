@@ -105,3 +105,13 @@ Thanks to the generous contributions of GitHub contributor [@xu233333](https://g
 - Spawn probabilities for Cursed Creatures are now configurable. See [wiki](https://ssc-wiki.readthedocs.io/en/latest/mod_content/mod_config/) for details.
 
 - Added missing descriptions for the \`snow_fox\` form.
+
+### 1.0.63 - 1.0.64
+
+- Fixed issue which bat_3's clinging/hanging animations not sync properly in multiplayer servers
+
+- Powerful Inhibitor now correctly affects special forms
+
+- [@xu233333](https://github.com/xu233333): add back detail screen for bigger text in Book of Shape Shifter
+
+- Emergency fix issue which localization would fail when the owo-lib mod was not installed
