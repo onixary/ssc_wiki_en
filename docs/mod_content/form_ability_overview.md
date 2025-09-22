@@ -4,7 +4,7 @@
 
 1. **Allay**: A floating spectral entity that can only consume amethyst shards. Fragile but skilled with bows, capable of absorbing targets' health through arrows.
 
-2. **Feral Cat**: A quadruped animal with conservative strengths and weaknesses, possessing night vision and fall damage immunity.
+2. **Feral Cat**: A quadruped animal with conservative strengths and weaknesses, possessing fall damage immunity power.
 
 ### Progressive Forms
 
