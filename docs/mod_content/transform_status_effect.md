@@ -45,7 +45,7 @@ Brewing form potions requires following these steps:
 
 ### Current Form Potion Recipes:  
 - `Moondust Potion` + `Dripstone` = `Bat Form Potion`  
-- `Moondust Potion` + `Small Dripleaf` = `Axolotl Form Potion`  
+- `Moondust Potion` + `Big Dripleaf` = `Axolotl Form Potion`  
 - `Moondust Potion` + `Raw Chicken` = `Ocelot Form Potion`  
 - `Moondust Potion` + `Amethyst Shard` = `Allay Form Potion`  
 - `Moondust Potion` + `Cod bucket` = `Feral Cat Form Potion`  
