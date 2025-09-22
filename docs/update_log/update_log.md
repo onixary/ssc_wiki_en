@@ -115,3 +115,37 @@ Thanks to the generous contributions of GitHub contributor [@xu233333](https://g
 - [@xu233333](https://github.com/xu233333): add back detail screen for bigger text in Book of Shape Shifter
 
 - Emergency fix issue which localization would fail when the owo-lib mod was not installed
+
+### 1.0.7
+
+The New Permanent Axolotl Form Is Here!
+
+**Important Note:** Due to rewriting the form-related code logic, updating to version 1.0.7 **will reset players' current forms!**
+
+Refer to wiki for instructions on using commands to restore previous forms. Alternatively, you can use an NBT editor to modify the corresponding fields in player save files to set forms.
+
+- Permanent stage 4 axolotl form
+
+  Unlike the stage 3, in the permanent form, your moisture (oxygen bar) will serve as a resource pool for releasing special water-flow abilities.
+
+  Originally planned for release alongside the new wolf form, since some players wanted to experience it sooner, we decided to release a update for it.
+
+- Cursed Moon phases is configurable now:
+  
+  You can now customize the moon phases that trigger the Cursed Moon event in the shape-shifter-curse-common.toml file or in-game settings. Changes require restarting the game/server to take effect.
+
+  Clearing the moon phase array will disable the Cursed Moon event.
+
+  Additionally, the default Cursed Moon frequency has been reduced to \[1, 5\] for a better experience.
+
+- Colored text compatibility
+
+  You can install [Rich Translatable Text](https://www.curseforge.com/minecraft/mc-mods/rich-translatable-text) mod to display colored text.
+
+- Other Bug Fixes and Mechanic Optimizations
+
+  Improved climbing animations for specific forms.
+
+  Added support for datapacks to customize maximum potion stack sizes.
+
+  Fixed conflicts with ExpandAbility.
