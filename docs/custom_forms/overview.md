@@ -1,7 +1,7 @@
 # Overview
 
 ## The implementation of a new data-driven custom framework is in progress, which will allow for complete customization of both the form and the animations. The information below will become outdated soon. 
-## Until the new documentation is completed, please refer to the relevant examples in the GitHub repository.
+## Until the new documentation is completed, please refer to the relevant examples in the [GitHub repository](https://github.com/onixary/shape-shifter-curse-fabric/tree/master/custom_form_pack_example).
 
 This mod is not yet fully data-driven (and may remain so in the future). However, using the built-in "Empty Forms" system, you can largely create your own custom forms.
 
