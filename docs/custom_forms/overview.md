@@ -1,58 +1,33 @@
 # Overview
 
-## The implementation of a new data-driven custom framework is in progress, which will allow for complete customization of both the form and the animations. The information below will become outdated soon. 
-## Until the new documentation is completed, please refer to the relevant examples in the [GitHub repository](https://github.com/onixary/shape-shifter-curse-fabric/tree/master/custom_form_pack_example).
+Please first check the relevant examples in the [GitHub repository](https://github.com/onixary/shape-shifter-curse-fabric/tree/master/custom_form_pack_example)
 
-This mod is not yet fully data-driven (and may remain so in the future). However, using the built-in "Empty Forms" system, you can largely create your own custom forms.
+Starting from version 1.0.71, the custom form system of this mod has been further improved.
+Now you can achieve complete customization of **form models**, **form abilities**, and **action animations** through **datapacks** + **resource packs**
 
-Currently, three types of "Progressive Forms" and three "Special Forms" are predefined with the following naming conventions:
-
-Progressive Forms:
-
-
-```
-form_alpha_0, form_alpha_1, form_alpha_2
-form_beta_0, form_beta_1, form_beta_2
-form_gamma_0, form_gamma_1, form_gamma_2
-```
-
-Special Forms:
-
-
-```
-form_omega_sp
-form_psi_sp
-form_chi_sp
-```
-
-"Progressive Forms" will evolve through stages based on the Cursed Moon and Instincts mechanics, designed for players seeking the vanilla mod experience.
-
-"Special Forms" only have one stage and are unaffected by the Cursed Moon mechanics, suitable for players who wish to play with specific forms only.
+If you have added custom forms in older versions before, you should be able to easily upgrade them to the new version by referring to the content of this chapter
 
 ---
 
-To obtain these empty form states through brewing:
+**What you can do with resource packs/datapacks:**
 
-`alpha` → `Moon Dust Potion` + `Red Dye`  
-`beta` → `Moon Dust Potion` + `Yellow Dye`  
-`gamma` → `Moon Dust Potion` + `Blue Dye`  
+- Add brand new custom forms, specifying form types (phase-changing forms/special forms) and body types (humanoid/feral)
 
-`omega` → `Moon Dust Potion` + `Green Dye`  
-`psi` → `Moon Dust Potion` + `Orange Dye`  
-`chi` → `Moon Dust Potion` + `Purple Dye`  
+- Implement transformation to custom forms under specific conditions through origins_power_extra
 
----
+- Apply different state animations to custom forms
 
-**Currently achievable via resource packs/data packs:**
+- Customize models for new forms or override models of existing forms, including soft bone effects
 
-- Customize models for any empty or existing form, including soft bone effects
-- Customize abilities for any empty or existing form
-- Modify form descriptions in the Book of Shape Shifter via localization files
+- Customize various abilities (powers) for new forms or override abilities of existing forms
 
-**Currently unavailable via resource packs/data packs:**
+- Customize descriptions of certain forms in the Shape Shifter's Book through localization files
 
-- Adding completely new form definitions (must use pre-registered forms)
-- Applying different state animations to forms
-- Customizing brewing recipes for form potions
-- Customizing food items (e.g., implementing "edible sticks" - similar mechanics are handled by built-in logic)
 
+**Some limitations of the current custom form system:**
+
+- Cannot yet add transformation effects from vanilla forms to custom forms
+
+- Cannot yet add form potions for custom forms
+
+- Cannot yet add special mobs that grant transformation effects for custom forms

@@ -1,5 +1,50 @@
 # Mod Configuration Options
 
+It is highly recommended that you install [Mod Menu](https://www.curseforge.com/minecraft/mc-mods/modmenu) to configure the mod
+
+### Player Custom Configuration Options
+
+Configuration file path: `config\shape-shifter-curse-client-custom.toml`
+
+- `keep_original_skin = true`
+
+        Whether to keep your original skin
+
+- `enable_form_color = true`
+
+        Whether to enable form color customization feature
+
+- `primaryColor = 13822450`
+
+        Primary color of the form
+        The value of this color is the decimal value converted from hexadecimal color
+        It is recommended to install ModMenu to directly configure Hex colors intuitively in the game
+
+- `accentColor1Color = 8967367`
+
+        Accent color 1 of the form
+
+- `accentColor2Color = 7829367`
+
+        Accent color 2 of the form
+
+- `eyeColor = 1118481`
+
+        Eye color of the form. Only takes effect on forms where eye color is overridden
+
+- `primaryGreyReverse = false`
+
+        Whether to reverse the grayscale value of the primary color
+        The custom colors of forms will be mixed with the grayscale texture of the original texture to achieve a more natural effect
+
+- `accent1GreyReverse = false`
+
+        Whether to reverse the grayscale value of accent color 1
+
+- `accent2GreyReverse = false`
+
+        Whether to reverse the grayscale value of accent color 2
+
 ### Client-Side Configurations
 
 Configuration file path: `config\shape-shifter-curse-client.toml`

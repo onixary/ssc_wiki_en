@@ -1,116 +1,142 @@
-# Custom Form Abilities Using Origins Data-Driven Approach
+# Adding Custom Form Abilities
 
-The mod uses [Origins](https://modrinth.com/mod/origins) logic to define different abilities for various forms. In other words, each form corresponds to a separate origin in Origins.
+The mod uses the logic of [Origins](https://modrinth.com/mod/origins) to define different abilities for different forms. In other words, each form corresponds to a separate origin in Origins
 
-To define abilities for custom forms, please refer to the [Origins documentation](https://origins.readthedocs.io/en/latest/).
+To define abilities for custom forms, please refer to the [Origins documentation](https://origins.readthedocs.io/en/latest/)
 
-Additionally, the mod includes some extra powers and actions related to its unique mechanics.
+In addition, the mod has additionally added some powers and actions related to specific mechanisms for use
 
 ---
 
-## Additional Powers and Actions Added by the Mod:
+## Transformation Trigger Powers Mounted on Existing Forms
 
-### Instinct Value Related
+### Mounting Transformation Powers
 
-These powers and actions interact with the instinct system to increase or decrease instinct values. Specific values are determined by predefined enums.
+To trigger transformation through in-game conditions, you first need to mount your own transformation power in the `custom_form_pack_example/example_form_datapack/data/example_namespace/origins_power_extra` directory
 
-```json
+```
 {
-    // Immediate effects (value type)
-    FORM_OCELOT_ATTACK_LIVESTOCK(3.0f),
-    // Effects for custom forms
-    FORM_INSTANT_INSTINCT_MEDIUM(3.0f),
-    FORM_INSTANT_INSTINCT_LARGE(5.0f),
-    // Sustained effects (rate type)
-    // Both catalyst and golden apple effects last 2 seconds
-    FORM_USE_GOLDEN_APPLE(-4.25f / 2),
-    FORM_USE_CATALYST(1.25f / 2),
-    FORM_BAT_IN_DARK(0.004f),
-    FORM_BAT_EAT_FRUIT(0.1f),
-    FORM_BAT_NEAR_DRIPSTONE(0.006f),
-    FORM_AXOLOTL_IN_WATER(0.004f),
-    FORM_AXOLOTL_EAT_FISH(0.1f),
-    FORM_AXOLOTL_NEAR_DRIPLEAF(0.008f),
-    FORM_OCELOT_EAT_RAW_MEAT(0.1f),
-    FORM_OCELOT_ON_LEAF(0.008f),
-    // Effects for custom forms
-    FORM_SUSTAINED_INSTINCT_ENVIRONMENT_MEDIUM(0.004f),
-    FORM_SUSTAINED_INSTINCT_ENVIRONMENT_LARGE(0.008f),
-    FORM_SUSTAINED_INSTINCT_FOOD(0.1f);
+  "TargetOriginsID": "shape-shifter-curse:form_original_shifter",
+  "ExtraPowers": [
+    "example_namespace:to_example_form"
+  ]
 }
 ```
 
-#### add_sustained_instinct_in_time
+In the above example, the power `example_namespace:to_example_form` will be mounted under the form `shape-shifter-curse:form_original_shifter`
+
+This way, when you are in the `form_original_shifter` form, you can trigger the transformation effect implemented in the power `to_example_form`
+
+If you implement your own basic form instead of reusing the basic forms in the mod, you can skip the mounting step and directly implement the transformation power in your own basic form
+
+### Implementation of Transformation Powers
+
+After mounting in JSON, you need to implement your own transformation power
+
+Like other powers, transformation powers need to be placed in the `custom_form_pack_example/example_form_datapack/data/example_namespace/powers` directory
+
+You can find all current form IDs [here](https://github.com/onixary/shape-shifter-curse-fabric/tree/master/src/main/resources/data/shape-shifter-curse/origins)
+
+Use the `shape-shifter-curse:transform_to_form` action to trigger the transformation logic:
+
+```
+{
+  "type": "origins:action_on_item_use",
+  "entity_action": {
+    "type": "shape-shifter-curse:transform_to_form",
+    "form_id": "example_namespace:example",
+    "instant": true
+  },
+  "item_condition": {
+    "type": "origins:ingredient",
+    "ingredient": {
+      "tag": "origins:fish"
+    }
+  }
+}
+```
+
+In the above example, when a player eats any fish, `shape-shifter-curse:transform_to_form` will be triggered, transforming the player into the `example_namespace:example` form
+
+Since you have registered the power to be mounted under the `form_original_shifter` form, this power will only take effect when in that form
+
+---
+
+## Mod-Specific Powers and Actions:
+
+### Instinct System Related
+
+These powers and actions are used to interact with the mod's instinct system, used to increase or decrease instinct values under specific conditions
+
+#### add_sustained_instinct
       
-A power that increases or decreases instinct over a period of time, example below:
+Power used to continuously increase or decrease instinct
+
+When the `instinct_effect_id` field of a power duplicates with an existing power, the later loaded power will overwrite the existing power
+
+The following example implements continuously increasing instinct values at a rate of 0.003 per tick when the player is in the Lush Caves biome
 
 ```json
-   {
-      "type": "origins:add_sustained_instinct_in_time",
-      "instinct_effect_type": "FORM_AXOLOTL_EAT_FISH",
-      "duration": 20,
-      "is_on_item_finished": true,
+    {
+      "type": "shape-shifter-curse:add_sustained_instinct",
+      "instinct_effect_id": "FORM_AXOLOTL_BIOME",
+      "value": 0.003,
+      "duration": 1,
       "condition": {
-         "type": "origins:using_item",
-         "item_condition": {
-            "type": "origins:ingredient",
-            "ingredient": {
-               "tag": "origins:fish"
-            }
-         }
+        "type": "origins:biome",
+        "biome": "minecraft:lush_caves"
       }
-   }
+    }
 ```
 
 #### add_instinct
       
-An action that instantly increases or decreases instinct, only applicable to enum definitions of immediate effects, example below:
+Action to increase or decrease instinct once
+
+The following example implements increasing instinct value by 0.1 per tick for 20 ticks each time a player eats raw fish. That is, increasing 2 instinct values within 1 second
 
 ```json
-   {
-      "type": "origins:self_action_on_hit",
+    {
+      "type": "origins:action_on_item_use",
       "entity_action": {
-      "type": "origins:add_instinct",
-         "instinct_effect_type": "FORM_OCELOT_ATTACK_LIVESTOCK"
+        "type": "shape-shifter-curse:add_instinct",
+        "instinct_effect_id": "FORM_AXOLOTL_EAT_FISH",
+        "value": 0.1,
+        "duration": 20
       },
-      "target_condition": {
-         "type": "origins:in_tag",
-         "tag": "origins:livestock"
+      "item_condition": {
+        "type": "origins:ingredient",
+        "ingredient": {
+          "tag": "origins:fish"
+        }
       }
-   }
+    }
 ```
 
-Generally, for stages 0 and 1 of "Progressive Forms", it's necessary to define `add_sustained_instinct_in_time` powers for golden apples and catalysts. Of course, you can freely define your own instinct items.
-   
+Generally speaking, for the 0th and 1st stages of "phased transformation forms", it is necessary to include powers related to [golden apples](https://github.com/onixary/shape-shifter-curse-fabric/blob/master/src/main/resources/data/shape-shifter-curse/powers/form_instinct_use_golden_apple.json) and [catalysts](https://github.com/onixary/shape-shifter-curse-fabric/blob/master/src/main/resources/data/shape-shifter-curse/powers/form_instinct_use_catalyst.json). Of course, you can also freely define your own instinct items
+
 ---
 
 ### Character Scaling Related:
    
-You can adjust character size scaling using the `scale` power. This scaling doesn't affect movement speed or jump height.
+You can adjust character size scaling through the `scale` power, this scaling will not affect form movement speed, jump height, and other attributes
 
-Every form **must** include a `scale` power, otherwise size irregularities may occur during form changes.
+The `eye_scale` field is used to define camera height scaling
+   
+Each form **must** contain a `scale` power, otherwise size confusion may occur when transforming forms
 
 ```json
 {
-   "type": "origins:scale",
-   "scale" : 1.0
+  "type": "shape-shifter-curse:scale",
+  "scale": 0.5,
+  "eye_scale": 0.6
 }
 ```
 
 ---
 
-### Levitation Ability:
+### Other Specific Powers and Actions:
    
-A power that grants the ability to fly to a certain height and hover in air when holding the jump key. The `"continuous"` value must be `true`.
+Custom powers, actions, and conditions used by various forms in the mod are all in the source code [additional_power](https://github.com/onixary/shape-shifter-curse-fabric/tree/master/src/main/java/net/onixary/shapeShifterCurseFabric/additional_power) directory, no further elaboration here
 
-```json
-{
-   "type": "origins:levitate",
-   "ascent_speed": 0.3,
-   "max_ascend_duration" : 30,
-   "key": {
-      "key": "key.jump",
-      "continuous": true
-   }
-}
-```
+Feel free to refer to and reuse them

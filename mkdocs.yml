@@ -10,14 +10,16 @@ nav:
         - Form Types: mod_content/form_types.md
         - Form Ability Overview: mod_content/form_ability_overview.md
         - Form Change And Recovery: mod_content/form_change_and_recovery.md
+        - Morphscale Armors: mod_content/morphscale_armors.md
         - Mod Config: mod_content/mod_config.md
         - In Game Commands: mod_content/commands.md
         - FAQ: mod_content/common_issues.md
     - Creating Custom Forms:
         - Overview: custom_forms/overview.md
-        - Resource Pack/Data Pack Example: custom_forms/pack_example.md
-        - Custom Models Using Origin Furs Data-Driven Approach: custom_forms/originfur_resource_pack.md
-        - Custom Form Abilities Using Origins Data-Driven Approach: custom_forms/origins_data_pack.md
+        - Resource Pack/Datapack Structure: custom_forms/pack_example.md
+        - Configure Form Definition JSON: custom_forms/form_definition_json.md
+        - Adding Custom Form Models and Animations: custom_forms/originfur_resource_pack.md
+        - Adding Custom Form Powers: custom_forms/origins_data_pack.md
 theme:
   name: readthedocs
   highlightjs: true
@@ -30,4 +32,3 @@ markdown_extensions:
     - toc:
         separator: "_"
     - admonition
-    
