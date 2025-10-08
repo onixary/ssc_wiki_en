@@ -20,6 +20,7 @@ nav:
         - Configure Form Definition JSON: custom_forms/form_definition_json.md
         - Adding Custom Form Models and Animations: custom_forms/originfur_resource_pack.md
         - Adding Custom Form Powers: custom_forms/origins_data_pack.md
+        - Adding Color Customization to Custom Forms: custom_forms/custom_form_colormask.md
 theme:
   name: readthedocs
   highlightjs: true
