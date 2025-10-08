@@ -61,10 +61,10 @@ Identify the index within the group and transformation phase respectively, used 
 
 They correspond one-to-one, with meanings and relationships as follows. Please refer to the table below to register the corresponding groupIndex and phase according to the stage of your desired custom form:
 
-| groupIndex: |        -2         |        -1        |      0      |      1      |      2      |         3         |     5      |
-|:-----------:|:-----------------:|:----------------:|:-----------:|:-----------:|:-----------:|:-----------------:|:----------:|
-|   phase:    |    PHASE_CLEAR    |   PHASE_CLEAR    |   PHASE_0   |   PHASE_1   |   PHASE_2   |      PHASE_3      |  PHASE_SP  |
-|    Form Stage:    | Form when mod content is not enabled, useless for custom | Placeholder for original form before transformation, useless for custom | First stage of phased transformation forms | Second stage of phased transformation forms | Third stage of phased transformation forms | Fourth stage of phased transformation forms, i.e., permanent stage | Special form that can be restored at any time |
+| groupIndex: |        -2         |        -1        |                       0                        |      1      |      2      |         3         |     5      |
+|:-----------:|:-----------------:|:----------------:|:----------------------------------------------:|:-----------:|:-----------:|:-----------------:|:----------:|
+|   phase:    |    PHASE_CLEAR    |   PHASE_CLEAR    |                    PHASE_0                     |   PHASE_1   |   PHASE_2   |      PHASE_3      |  PHASE_SP  |
+|    Form Stage:    | Form when mod content is not enabled, useless for custom | Placeholder for original form before transformation, useless for custom |        First stage of progressive forms        | Second stage of progressive forms | Third stage of progressive forms | Fourth stage of progressive forms, i.e., permanent stage | Special form that can be restored at any time |
 
 For example: `groupIndex` of `bat_0` should be set to `0`, and `phase` should be set to `PHASE_0`
 
