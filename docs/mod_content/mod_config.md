@@ -92,3 +92,9 @@ Configuration file path: `config\shape-shifter-curse-common.toml`
       When the values in the array are cleared, i.e., configured as "curseMoonPhase = []", the Cursed Moon event will be disabled.
       
       This is useful for creating modpacks that focus on a specific form.
+
+- `allowSleepInCursedMoon = false`
+
+      Allow sleep during Cursed Moon event，Default value is false.
+
+      If set to true, your form will revert to form before Cursed Moon event upon waking up.
