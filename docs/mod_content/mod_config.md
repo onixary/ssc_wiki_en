@@ -84,3 +84,11 @@ Configuration file path: `config\shape-shifter-curse-common.toml`
       Enabled by default. Set to false to use the legacy version of the book pages
       
       Note: Legacy version requires owo-lib mod to function properly
+
+- `curseMoonPhase = [1, 5]`
+
+      Configure the moon phases when the Cursed Moon event takes effect, with a value range of 0-7. Default value is moon phase 1 and moon phase 5.
+
+      When the values in the array are cleared, i.e., configured as "curseMoonPhase = []", the Cursed Moon event will be disabled.
+      
+      This is useful for creating modpacks that focus on a specific form.

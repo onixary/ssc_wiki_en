@@ -149,3 +149,27 @@ Refer to wiki for instructions on using commands to restore previous forms. Alte
   Added support for datapacks to customize maximum potion stack sizes.
 
   Fixed conflicts with ExpandAbility.
+
+### 1.0.71 & 1.0.72
+
+Form Color Customization, Form Armor, and the New Custom Form System
+
+- Form Color Customization System Added
+
+    You can now customize your form colors and eye colors by using the ModMenu configuration or directly modifying the config\shape-shifter-curse-client-custom.toml configuration file.
+
+    Configurable colors are divided into Primary Color, Accent Color 1, Accent Color 2 and Eye Color, allowing for flexible combinations.
+
+- New Morphscale Armor
+
+    A new type of armor called Morphscale Armor has been introduced, which can be equipped by most forms.
+
+    To craft Morphscale Armor, you’ll need Untreated Moondust, Gold Ingots, Amethyst Shards, and the corresponding Diamond Armor. For details, please refer to the wiki.
+
+- Completely Revamped Custom Form System
+
+    The Custom Form System has been upgraded.
+
+    Now, you can fully customize new form models, form powers, and state animations using data packs + resource packs, without being restricted by the previous empty forms.
+
+    Refer to the wiki for more details.
