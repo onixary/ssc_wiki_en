@@ -45,6 +45,16 @@ Configuration file path: `config\shape-shifter-curse-client-custom.toml`
 
         Whether to reverse the grayscale value of accent color 2
 
+![form_color_config.png](../img/form_color_config.png)
+
+In the Form Color Config after 1.0.73, the alpha channel (first two digits in the Hex color code) determines whether the original texture color of the form should be overwritten. Only FF and 00 are accepted as input.
+
+If set to 00, the corresponding region will retain its original texture color.
+
+If set to FF, the color you specify will fully replace the original texture color.
+
+You can use this alpha channel setting to achieve effects like only modifying eye color while keeping the rest of the texture unchanged.
+
 ### Client-Side Configurations
 
 Configuration file path: `config\shape-shifter-curse-client.toml`
