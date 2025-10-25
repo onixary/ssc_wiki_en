@@ -66,6 +66,8 @@ Ensure that all bone prefix names in a bone chain in Blockbench remain consisten
 
 ## Adding Custom Animations
 
+## Note: The current Blockbench 5 version will break the animation export of the Azure Animation plugin, please use the BlockBench 4 version
+
 The mod implements custom animations for different forms based on the method of [playerAnimator](https://modrinth.com/mod/playeranimator)
 
 To add custom animations, you also need to install the `AzureLib Animator` plugin in Blockbench and refer to the [existing animation project](https://github.com/onixary/shape-shifter-curse-fabric/blob/master/3d_models/player_form/0_common/feral_form/animation/form_feral_common_anim.bbmodel), creating frame animations in the `Animate` tab that appears in the upper right corner
