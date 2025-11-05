@@ -218,7 +218,7 @@ The mod now **only requires Azurelib, Pehkui** and **Satin-api** as a dependency
 
 **Minor Optimizations**
 
-- **Morphscale Armor** has more defences now (see Wiki for details).
+- **Morphscale Armor** has more defense now (see Wiki for details).
 
 - **Heterochromia (different-colored eyes)** can now be configured in the **custom color settings**.
 
