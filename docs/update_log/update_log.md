@@ -174,7 +174,7 @@ Form Color Customization, Form Armor, and the New Custom Form System
 
     Refer to the wiki for more details.
 
-### Update 1.0.73
+### 1.0.73
 
 **Ocelot Form Mechanic Improvements**
 
