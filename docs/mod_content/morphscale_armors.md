@@ -22,7 +22,7 @@ First, you need to craft a Morphscale Core, then use the corresponding diamond g
 
 | Armor Value | Armor Toughness | Durability |
 |:---:|:----:|:---:|
-|  1  |  1   | 264 |
+|  2  |  1   | 264 |
 
 ### Morphscale Vest
 
@@ -30,7 +30,7 @@ First, you need to craft a Morphscale Core, then use the corresponding diamond g
 
 | Armor Value | Armor Toughness | Durability |
 |:---:|:----:|:---:|
-|  6  |  1   | 384 |
+|  7  |  1   | 384 |
 
 ### Morphscale Cuishes
 
@@ -38,7 +38,7 @@ First, you need to craft a Morphscale Core, then use the corresponding diamond g
 
 | Armor Value | Armor Toughness | Durability |
 |:---:|:----:|:---:|
-|  4  |  1   | 360 |
+|  6  |  1   | 360 |
 
 ### Morphscale Anklets
 
