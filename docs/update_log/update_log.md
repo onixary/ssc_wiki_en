@@ -173,3 +173,69 @@ Form Color Customization, Form Armor, and the New Custom Form System
     Now, you can fully customize new form models, form powers, and state animations using data packs + resource packs, without being restricted by the previous empty forms.
 
     Refer to the wiki for more details.
+
+### Update 1.0.73
+
+**Ocelot Form Mechanic Improvements**
+
+Compared to other forms, the ocelot form's mechanics were somewhat simplistic. This update introduces new features:
+
+- Ocelot_2 & Ocelot_3: Sneak rush now allows stepping over 1-block-high obstacles.
+
+- Ocelot_3: You can now deal pounce damage by colliding with enemies mid-leap.
+
+**Modified** Morphscale **Armor Crafting**
+
+To craft Morphscale Armor now, you must first craft a Morphscale Core, then use the corresponding diamond gear, the Morphscale Core, and Untreated Moondust in a Smithing Table. This preserves the original equipment's enchantments.
+
+Check the [wiki](https://ssc-wiki.readthedocs.io/en/latest/mod_content/morphscale_armors/) for details.
+
+**Custom Color Optimization**
+
+Color values now include an additional alpha channel. Setting it to 00 retains the vanilla texture color.
+
+This is useful for modifying only specific parts (e.g., eye color).
+
+Check the [wiki ](https://ssc-wiki.readthedocs.io/en/latest/mod_content/mod_config/)for details.
+
+**Bug Fixes**
+
+- Fixed Axolotl_3 appearing upside-down while crawling.
+
+- Fixed Axolotl_3 launching attackers when wearing Thorns-enchanted armor while in Wave-Riding mode.
+
+- Fixed localization errors in the Carnivore ability.
+
+### **1\.0.74**
+
+**Russian Localization**
+
+Thanks to **[MaxMobile-ru](https://github.com/MaxMobile-ru)** for their contribution! The mod now includes **Russian translations**.
+
+**Simplified Dependencies**
+
+The mod now **only requires Azurelib, Pehkui** and **Satin-api** as a dependency.
+
+**Minor Optimizations**
+
+- **Morphscale Armor** has more defences now (see Wiki for details).
+
+- **Heterochromia (different-colored eyes)** can now be configured in the **custom color settings**.
+
+- Added **compatibility** with edible items from *Farmer's Delight, Ocean's Delight, Nether's Delight and Tide*
+
+- **Allay_SP** can now **take off mid-air**, **walk on powder snow,** and gain some **saturation** when consuming **amethyst shards**.
+
+- **Mophscale Core** and **Book of Shape Shifter** textures have been optimized.
+
+**Bug Fixes**
+
+- Fixed **edibility issues** with *Farmer's Delight* items.
+
+- Fixed abnormal **riding animations** for some forms.
+
+- Fixed **water speed limits** and **Depth Strider enchantment** not working properly for certain forms.
+
+- Fixed **glowing effects** not displaying correctly on form models.
+
+- Fixed **Allay_SP's levitate ability** behaving abnormally on servers.
