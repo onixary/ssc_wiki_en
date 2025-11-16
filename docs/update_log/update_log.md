@@ -239,3 +239,23 @@ The mod now **only requires Azurelib, Pehkui** and **Satin-api** as a dependency
 - Fixed **glowing effects** not displaying correctly on form models.
 
 - Fixed **Allay_SP's levitate ability** behaving abnormally on servers.
+
+### 1.0.76
+
+This version fixes a critical bug that caused crashes and is recommended to update.
+
+**Bug Fixes:**
+
+- Fixed a critical bug in version 1.0.75 that caused the game to crash when foxes eating food.
+  
+- Fixed the issue where the increased damage from the Ocelot's bare-handed attacks was incorrectly applied to projectiles.
+  
+- Fixed the problem with the position of riding animation for Feral forms displaying incorrectly.
+
+**Experience Improvements:**
+
+- The water flow explosion power of Axolotl_3 no longer affects Item Frames.
+  
+- Familiar_fox no longer absorbs the energy of creatures while in sneaking.
+  
+- Familiar_fox no longer absorbs the energy of villagers and wandering merchants during transactions to optimize the trading experience. You will now need to hold an empty bottle to collect their energy.
