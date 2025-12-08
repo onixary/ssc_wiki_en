@@ -259,3 +259,25 @@ This version fixes a critical bug that caused crashes and is recommended to upda
 - Familiar_fox no longer absorbs the energy of creatures while in sneaking.
   
 - Familiar_fox no longer absorbs the energy of villagers and wandering merchants during transactions to optimize the trading experience. You will now need to hold an empty bottle to collect their energy.
+
+### 1.8.0
+
+The Wolf Form/Jackal Variant has been released!
+
+**New Wolf Form:**
+
+The Jackal Variant form has been introduced. This form focuses on group combat and it's "withering" power.
+
+Search for the new entity called "Wandering Jackal Wraith" in the desert for transformation effect. 
+
+**Experience Optimization:**
+
+Unnecessary instinct bars are now hidden in permanent forms.
+
+The mouth holding position of the Book of Shape Shifter in Feral Forms has been adjusted; it no longer gets stuck inside the player's head.
+
+**Bug Fixes:**
+- Fixed the issue where version 1.8.0-beta caused server crashes.
+- Fixed the problem where the latest version of the FirstPerson mod affected the first-person perspective of certain forms.
+- Fixed the bug where the final form of the Axolotl kept descending when viewed in Observer Mode.
+- Fixed the issue where other players in the Feral Form could not properly display items they were holding in their mouths within the server environment.
