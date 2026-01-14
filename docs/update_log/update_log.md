@@ -281,3 +281,53 @@ The mouth holding position of the Book of Shape Shifter in Feral Forms has been 
 - Fixed the problem where the latest version of the FirstPerson mod affected the first-person perspective of certain forms.
 - Fixed the bug where the final form of the Axolotl kept descending when viewed in Observer Mode.
 - Fixed the issue where other players in the Feral Form could not properly display items they were holding in their mouths within the server environment.
+
+### 1.8.1:
+
+This version includes mechanic reworks for some weak forms, along with the introduction of form-exclusive trinkets and tools to enrich gameplay experience.
+
+1. Form Mechanic Changes
+
+    1. Familiar Fox Form
+
+       Hunger can now be restored normally through food (though with reduced efficiency)
+
+       Additionally, an extra mana resource bar has been added for casting form abilities. The mana drain ability is now used to replenish the mana resource bar.
+
+       Fire Arrow: Consumes a small amount of mana, uses sticks to launch fire arrows that ignite enemies. Can craft the advanced Fire Charm Paper item. Consuming a Fire Charm Paper allows launching a more powerful fireball.
+
+       Flame Ring: Consumes more mana, press the ability key to cast a ring of fire that ignites and damages nearby targets.
+
+       When mana decreases, you will receive negative effects. At the permanent stage, when mana reaches zero, you will take continuous damage.
+
+    2. Bat Form
+
+       The permanent stage's clinging and hanging mechanics have been enhanced: the jump when leaving cling state is strengthened, allowing you to gain height through clinging.
+
+       Additionally, its survivability has been enhanced through exclusive trinkets and items.
+
+    3. Axolotl Form
+
+       Weakened the max health bonus when wet, and the Wave-riding state now slowly consumes wetness.
+
+    4. Ocelot Form
+
+       Can now automatically hiss to drive away Phantoms.
+
+2. Mechanism Optimizations:
+
+   Added an option to toggle whether to randomly play animal noises…and a bind to actively play animal noises.
+
+   For Ocelot Form, added a bind to toggle sneak edge protection to optimize feel.
+
+   Some forms' entity glowing effects will now be hidden when F1 is enabled, making it easier to take screenshots.
+
+   Reduced movement speed and damage of wild Jackal Wraith.
+
+3. Exclusive trinkets and Tools
+
+   Please see the mod wiki page.
+
+4. Bug Fixes
+
+   Fixed a bug where jumping on a bed during transformation animation would launch you into the air.
