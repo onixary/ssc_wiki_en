@@ -76,6 +76,14 @@ An item that can revert all forms, including permanent forms, back to the initia
 
 However, you can make it craftable by adding a custom recipe yourself.
 
+## Other Items
+
+### Fire Charm Paper
+
+![fire_charm_paper.png](../img/fire_charm_paper.png)
+
+`Fire Charm Paper`is a consumable item that can be used to cast powerful fireball for `Familiar Fox Form`.
+
 ## Form-Specific Tools and Trinkets
 
 See the `Form-Specific Tools and Trinkets` section for details.
