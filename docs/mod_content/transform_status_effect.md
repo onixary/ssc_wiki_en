@@ -33,7 +33,7 @@ Brewing form potions requires following these steps:
 
 **Crafting the Moondust Matrix item**  
 
-![](../img/moondust_matrix_receipe.png)
+![](../img/moondust_matrix_recipe.png)
 
 **Brew Moondust Potion using Moondust Matrix And Awkward Potion**  
 

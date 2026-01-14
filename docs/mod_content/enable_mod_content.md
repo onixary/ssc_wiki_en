@@ -8,7 +8,7 @@ Throughout your gameplay, the `Book of Shape Shifter` serves as an essential too
 
 ### Lost the Book of Shape Shifter?
 
-![](../img/book_receipe.png)
+![](../img/book_recipe.png)
 
 You can craft a new one at any time using `Untreated Moondust` + `Book`.
 

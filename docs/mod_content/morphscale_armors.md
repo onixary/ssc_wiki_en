@@ -14,7 +14,7 @@ First, you need to craft a Morphscale Core, then use the corresponding diamond g
 
 ### Morphscale Core
 
-![morphscale_core_receipe.png](../img/morphscale_core_receipe.png)
+![morphscale_core_recipe.png](../img/morphscale_core_recipe.png)
 
 ### Morphscale Head Ring
 

@@ -4,7 +4,7 @@ Various items and events in the world can affect your current form.
 
 ### Moondust Matrix  
 
-![](../img/moondust_matrix_receipe.png)
+![](../img/moondust_matrix_recipe.png)
 
 The `Moondust Matrix` is the core ingredient for brewing `Form Potions` and crafting other related items.  
 
@@ -12,13 +12,13 @@ The `Moondust Matrix` is the core ingredient for brewing `Form Potions` and craf
 
 ### Catalyst  
 
-![](../img/catalyst_receipe.png)
+![](../img/catalyst_recipe.png)
 
 Significantly increases your current `Instinct Value`.
 
 ### Inhibitor  
 
-![](../img/inhibitor_receipe.png)
+![](../img/inhibitor_recipe.png)
 
 When in stages 1 or 2 of a `Progressive Form`, or when in a `Special Form`, using this will revert your form by one stage.
 
@@ -28,13 +28,13 @@ Significantly decreases your current `Instinct Value`.
 
 ### Echo Catalyst  
 
-![](../img/echo_catalyst_receipe.png)
+![](../img/echo_catalyst_recipe.png)
 
 For `Progressive Forms` that include a `Permanent Form`: Use this at stage 3 to transform into the corresponding permanent form.
 
 ### Powerful Inhibitor  
 
-![](../img/powerful_inhibitor_receipe.png)
+![](../img/powerful_inhibitor_recipe.png)
 
 Similar to the Inhibitor, but effective on stage 3 of `Progressive Forms`.
 
