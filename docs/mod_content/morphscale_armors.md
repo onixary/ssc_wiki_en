@@ -67,8 +67,8 @@ Unlike vanilla, Netherite Morphscale Armor upgrades and repairs only require `Ne
 ![](../img/craft_morphscale_vest_netherite.png)
 
 | Armor Value | Armor Toughness | Durability |
-|:---:|:----:|:---:|
-|  8  |  1   | 592 |
+|:-----------:|:----:|:---:|
+|      6      |  1   | 592 |
 
 ### Netherite Morphscale Cuishes
 
