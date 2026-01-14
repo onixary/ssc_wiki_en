@@ -47,3 +47,51 @@ First, you need to craft a Morphscale Core, then use the corresponding diamond g
 | Armor Value | Armor Toughness | Durability |
 |:---:|:----:|:---:|
 |  2  |  1   | 312 |
+
+# Netherite Upgrade for Morphscale Armors
+
+After version 1.8.1, Netherite upgrades for Morphscale Armors were added.
+
+Unlike vanilla, Netherite Morphscale Armor upgrades and repairs only require `Netherite Scraps`, not `Netherite Ingots`.
+
+### Netherite Morphscale Head Ring
+
+![](../img/craft_morphscale_headring_netherite.png)
+
+| Armor Value | Armor Toughness | Durability |
+|:---:|:----:|:---:|
+|  3  |  1   | 481 |
+
+### Netherite Morphscale Vest
+
+![](../img/craft_morphscale_vest_netherite.png)
+
+| Armor Value | Armor Toughness | Durability |
+|:---:|:----:|:---:|
+|  8  |  1   | 592 |
+
+### Netherite Morphscale Cuishes
+
+![](../img/craft_morphscale_cuish_netherite.png)
+
+| Armor Value | Armor Toughness | Durability |
+|:---:|:----:|:---:|
+|  7  |  1   | 555 |
+
+### Netherite Morphscale Anklets
+
+![](../img/craft_morphscale_anklet_netherite.png)
+
+| Armor Value | Armor Toughness | Durability |
+|:---:|:----:|:---:|
+|  3  |  1   | 462 |
+
+# Morphscale Attribute Upgrade for Armors and Tools
+
+After version 1.8.1, you can add Morphscale attributes to any tools and armors added by other mods.
+
+Tools and armors with Morphscale attributes can be used and equipped by most forms regardless of restrictions. However, since compatibility cannot be ensured for all mod content, some armors may exhibit clipping issues.
+
+You need to use a `Morphscale Core` and a `Nether Star` in a Smithing Table to perform the Morphscale Attribute Upgrade.
+
+![morphscale_upgrade.png](../img/morphscale_upgrade.png)

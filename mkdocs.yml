@@ -5,12 +5,14 @@ nav:
         - Update Logs: update_log/update_log.md
     - Mod Content Guide: 
         - Brief Introduction: mod_content/brief_introduction.md
+        - Mod Specific Items: mod_content/mod_specific_items.md
         - Enable Mod Content: mod_content/enable_mod_content.md
         - Transform Status Effect: mod_content/transform_status_effect.md
         - Form Types: mod_content/form_types.md
         - Form Ability Overview: mod_content/form_ability_overview.md
         - Form Change And Recovery: mod_content/form_change_and_recovery.md
         - Morphscale Armors: mod_content/morphscale_armors.md
+        - Form Specific Tools And Trinkets: mod_content/form_specific_tools_and_trinkets.md
         - Mod Config: mod_content/mod_config.md
         - In Game Commands: mod_content/commands.md
         - FAQ: mod_content/common_issues.md
