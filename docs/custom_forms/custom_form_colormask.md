@@ -8,9 +8,9 @@ To enable color customization support for your custom forms, you need to create 
 
 The colormask texture is created based on your form's texture. It uses color channels to mark the effective areas for various custom color configurations:
 
-| Channel | R | G | B | A (0-10) |
-|:----:|:---:|:----:|:----:|:--------------:|
-| Corresponding Area | Primary Color | Accent Color 1 | Accent Color 2 | Eye Color |
+| Channel | R | G | B | A(value = 0) | A(value = 1) |
+|:----:|:---:|:----:|:----:|:------------:|:------------:|
+| Corresponding Area | Primary Color | Accent Color 1 | Accent Color 2 |  Eye Color1  |  Eye Color2  |
 
 When color configuration takes effect, colors are written in the order of primary color -> accent color 1 -> accent color 2 -> eye color, with later colors overlaying previous ones.
 
