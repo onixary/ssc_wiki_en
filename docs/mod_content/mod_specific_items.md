@@ -4,13 +4,13 @@ This section lists the items added by this mod and their crafting recipes.
 
 ## Basic Items
 
-### Unprocessed Moondust
+### Untreated Moondust
 
-`Unprocessed Moondust` is the core item of the mod. It involves most of the mod's content.
+`Untreated Moondust` is the core item of the mod. It involves most of the mod's content.
 
-`Unprocessed Moondust` drops from mobs during `Cursed Moon` events.
+`Untreated Moondust` drops from mobs during `Cursed Moon` events.
 
-After version 1.8.1, to accommodate gameplay without the `Cursed Moon Event` enabled, a crafting recipe for `Unprocessed Moondust` was added.
+After version 1.8.1, to accommodate gameplay without the `Cursed Moon Event` enabled, a crafting recipe for `Untreated Moondust` was added.
 
 ![untreated_moondust_recipe.png](../img/untreated_moondust_recipe.png)
 
