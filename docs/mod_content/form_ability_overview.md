@@ -17,3 +17,5 @@
 4. **Familiar Fox**: A magical being altered by foreign sorcery, allied with witches and illagers, sustaining itself on the energy of other creatures.
 
 5. **Snow Fox**: A predator infused with frigid magic, using enhanced leaps and snowballs as its primary attacks, capable of swift environmental traversal—but highly vulnerable to fire.
+
+6. **Jackal/Anubis Wolf**: A leader who summons a pack of wolf wraiths to fight and transforms the power of Wither into their own.

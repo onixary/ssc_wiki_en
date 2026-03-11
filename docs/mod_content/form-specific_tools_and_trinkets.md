@@ -43,7 +43,7 @@ Smelting `Moondust Crystal Grit` in a furnace or blast furnace will yield `Moond
 
     ![diamond_mining_claw_recipe.png](../img/diamond_mining_claw_recipe.png)
 
-  [Tool] Requires strong foreclaws. Mining efficiency and damage + , you can use wall clinging power when held
+  [Tool] Requires strong foreclaws. Mining efficiency and damage +, at the same time, when wielding this tool, your wall clinging power will not be affected.
 
 
 ### Ocelot Form
