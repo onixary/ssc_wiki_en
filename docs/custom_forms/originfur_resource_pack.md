@@ -66,7 +66,7 @@ Ensure that all bone prefix names in a bone chain in Blockbench remain consisten
 
 ## Adding Custom Animations
 
-## Note: The current Blockbench 5 version will break the animation export of the Azure Animation plugin, please use the BlockBench 4 version
+## Special Note: As of now (2026.03.11), the animation export format of the AzureLib Animator plugin in Blockbench 5 version has an issue where the rotation X and Y axes are inverted. As an alternative, please use the Geckolib plugin to create animations instead, as its animation format is consistent with the AzureLib plugin.
 
 The mod implements custom animations for different forms based on the method of [playerAnimator](https://modrinth.com/mod/playeranimator)
 
