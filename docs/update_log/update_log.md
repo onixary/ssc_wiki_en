@@ -282,52 +282,100 @@ The mouth holding position of the Book of Shape Shifter in Feral Forms has been 
 - Fixed the bug where the final form of the Axolotl kept descending when viewed in Observer Mode.
 - Fixed the issue where other players in the Feral Form could not properly display items they were holding in their mouths within the server environment.
 
-### 1.8.1:
+### 1.8.1 - 1.8.2
 
-This version includes mechanic reworks for some weak forms, along with the introduction of form-exclusive trinkets and tools to enrich gameplay experience.
+This version reworks the mechanics of some weaker forms and introduces form-specific trinkets and tools to enrich the mod's gameplay experience.
 
 1. Form Mechanic Changes
 
     1. Familiar Fox Form
 
-       Hunger can now be restored normally through food (though with reduced efficiency)
+       Hunger can now be restored normally through food, though with reduced efficiency.
 
        Additionally, an extra mana resource bar has been added for casting form abilities. The mana drain ability is now used to replenish the mana resource bar.
 
-       Fire Arrow: Consumes a small amount of mana, uses sticks to launch fire arrows that ignite enemies. Can craft the advanced Fire Charm Paper item. Consuming a Fire Charm Paper allows launching a more powerful fireball.
+       Fire Arrow: Consumes a small amount of mana and uses a stick to fire a flaming arrow that ignites enemies. You can craft the advanced Fire Charm Paper item; consuming Fire Charm Paper lets you launch a more powerful fireball.
 
-       Flame Ring: Consumes more mana, press the ability key to cast a ring of fire that ignites and damages nearby targets.
+       Flame Ring: Consumes more mana. Press the ability key to cast a ring of fire that ignites and damages nearby targets.
 
-       When mana decreases, you will receive negative effects. At the permanent stage, when mana reaches zero, you will take continuous damage.
+       When your mana decreases, you will receive negative effects. At the permanent stage, when mana reaches zero, you will continuously take damage.
 
     2. Bat Form
 
-       The permanent stage's clinging and hanging mechanics have been enhanced: the jump when leaving cling state is strengthened, allowing you to gain height through clinging.
+       The permanent stage's clinging and hanging mechanics have been enhanced: the jump when leaving the clinging state is strengthened, allowing you to gain height through clinging.
 
-       Additionally, its survivability has been enhanced through exclusive trinkets and items.
+       Its survivability has also been improved through exclusive trinkets and items.
 
     3. Axolotl Form
 
-       Weakened the max health bonus when wet, and the Wave-riding state now slowly consumes wetness.
+       The maximum health bonus while wet has been weakened, and Wave-Riding now slowly consumes wetness.
 
     4. Ocelot Form
 
-       Can now automatically hiss to drive away Phantoms.
+       It can now automatically hiss to drive away phantoms.
 
-2. Mechanism Optimizations:
+2. Mechanic Optimizations
 
-   Added an option to toggle whether to randomly play animal noises…and a bind to actively play animal noises.
+   Added an option to toggle random form sounds, as well as a key binding to actively play form sounds.
 
-   For Ocelot Form, added a bind to toggle sneak edge protection to optimize feel.
+   For Ocelot Form, added a key binding to toggle sneak edge protection to improve control feel.
 
-   Some forms' entity glowing effects will now be hidden when F1 is enabled, making it easier to take screenshots.
+   Some forms' entity glow effects are now hidden when F1 is enabled, making screenshots easier.
 
-   Reduced movement speed and damage of wild Jackal Wraith.
+   Reduced the movement speed and damage of wild Jackal Wraiths.
 
-3. Exclusive trinkets and Tools
+3. Exclusive Trinkets and Tools
 
    Please see the mod wiki page.
 
 4. Bug Fixes
 
-   Fixed a bug where jumping on a bed during transformation animation would launch you into the air.
+   Fixed a bug where jumping on a bed during the transformation animation would launch you into the air.
+
+### 1.8.3
+
+1. Merged the Russian localization made by [MaxMobile-ru](https://github.com/MaxMobile-ru).
+
+2. Added dietary compatibility for foods from several mods.
+
+### 1.9.0-1.9.1
+
+The new Spider Form is now available!
+
+1. Spider Form
+
+    Webbing is the core mechanic of Spider Form: fire web projectiles to build climbable cobweb structures and obstruct enemy movement. In later stages, the form also gains stronger mobility abilities.
+
+    Spider Form also has an extra second-pair-of-hands trinket slot, allowing exclusive trinkets and tools to further enhance its abilities.
+
+2. Mechanic Optimizations
+
+    Added a compatibility layer for Trinkets and native Curios in the Sinytra Connector version, so form trinkets can now be placed directly into Curios slots.
+
+    Entries in the Book of Shape Shifter now support automatically scrolling text, so overly long text will no longer be truncated.
+
+    Added several vanilla-form achievements as in-game guidance.
+
+    Added vanilla recipe unlocks for related items.
+
+    Optimized the footsteps of Spider Form and Feral Form so they better match their four-legged movement pattern.
+
+3. Bug Fixes
+
+    Fixed missing sound effects and missing night vision for Spider Form, along with several related issues.
+
+    Cursed Spiders now remain neutral under light, matching vanilla spiders.
+
+    Fixed missing localization descriptions for some forms.
+
+### 1.9.2
+
+1. New visual and interactive form color menu
+
+    The game now includes a brand-new visual and interactive color menu. You can precisely adjust form colors through RGB sliders and other controls while previewing the result in real time, so you no longer need to test Hex colors one by one.
+
+    You can open the color menu from the new button added to the Book of Shape Shifter, or from the mod configuration menu (requires Mod Menu).
+
+2. Merged the latest Russian localization made by [MaxMobile-ru](https://github.com/MaxMobile-ru). Many thanks!
+
+3. Updated the mod wiki pages.
