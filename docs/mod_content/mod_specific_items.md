@@ -26,9 +26,17 @@ See the `Form-Specific Tools and Trinkets` section for details.
 
 ![moondust_crystal_grit_smelting.png](../img/moondust_crystal_grit_smelting.png)
 
-`Moondust Crystal` is an advanced material for crafting form-specific tools and trinkets, which needs to be smelted from `Moondust Crystal Grit`.
+`Moondust Crystal` is an advanced material for crafting form-specific tools, trinkets, and altar recipes. It can be obtained by smelting `Moondust Crystal Grit` or crafting it directly at the `Shape Shifter Altar`.
 
-See the `Form-Specific Tools and Trinkets` section for details.
+![moondust_crystal_altar_recipe.png](../img/moondust_crystal_altar_recipe.png)
+
+See the `Form Specific Tools And Trinkets` and `Shape Shifter Altar & Catalyst Cores` sections for details.
+
+### Glint Prism
+
+![glint_prism_recipe.png](../img/glint_prism_recipe.png)
+
+Crafted at the `Shape Shifter Altar` (using either a Sea Lantern or a Ghast Tear in the center). `Glint Prisms` are used to craft `Catalyst Cores` and unlock high-tier `Perk Tree` nodes.
 
 ## Form-Affecting Items
 
@@ -37,8 +45,6 @@ See the `Form-Specific Tools and Trinkets` section for details.
 ![](../img/moondust_matrix_recipe.png)
 
 The `Moondust Matrix` is the core ingredient for brewing `Form Potions` and crafting other related items.
-
-`Untreated Moondust` drops from mobs during `Cursed Moon Events`.
 
 ### Catalyst
 
@@ -50,23 +56,25 @@ Significantly increases your current `Instinct Value`.
 
 ![](../img/inhibitor_recipe.png)
 
-When in stages 1 or 2 of a `Progressive Form`, or when in a `Special Form`, using this will revert your form by one stage.
+When in `Phase Initial` or `Phase 1` of a `Progressive Form`, or when in a `Special Form`, using this reverts your form by one stage. It also cures `Transformation Status Effects`.
 
 ### Golden Apple
 
-Significantly decreases your current `Instinct Value`.
+Significantly decreases your current `Instinct Value` and cures `Transformation Status Effects`.
+
+Starting from version 1.10.0, eating a `Golden Apple` while in `Phase Initial` reverts you directly back to your pre-transformation form.
 
 ### Echo Catalyst
 
 ![](../img/echo_catalyst_recipe.png)
 
-For `Progressive Forms` that include a `Permanent Form`: Use this at stage 3 to transform into the corresponding permanent form.
+For `Progressive Forms` that include a `Permanent Phase`: use this during `Phase 2` to transform into the corresponding permanent form.
 
 ### Powerful Inhibitor
 
 ![](../img/powerful_inhibitor_recipe.png)
 
-Similar to the Inhibitor, but effective on stage 3 of `Progressive Forms`.
+Similar to the Inhibitor, but effective on `Phase 2` of `Progressive Forms`, reverting non-permanent forms directly back to their initial stage.
 
 ### Creative Inhibitor
 
@@ -76,17 +84,35 @@ An item that can revert all forms, including permanent forms, back to the initia
 
 However, you can make it craftable by adding a custom recipe yourself.
 
+### Ripple Mirror
+
+![ripple_mirror_recipe.png](../img/ripple_mirror_recipe.png)
+
+Crafted at the `Shape Shifter Altar`. While in a permanent form that has sub-forms, hold right-click to open `The Mirror` interface and switch between the main form and its sub-forms. See the `Sub-Forms` section for details.
+
 ## Other Items
 
-### Fire Charm Paper
+### Fire Charm Paper & Explosive Charm Paper
 
 ![fire_charm_paper.png](../img/fire_charm_paper.png)
 
-`Fire Charm Paper`is a consumable item that can be used to cast powerful fireball for `Familiar Fox Form`.
+`Fire Charm Paper` is a consumable item used by `Familiar Fox Form` to launch enhanced fireballs.
+
+Starting from version 1.10.0, you can upgrade it at the `Shape Shifter Altar` with a `Foxfire Catalyst Core` into the stronger `Explosive Charm Paper`.
+
+![explosive_charm_paper_recipe.png](../img/explosive_charm_paper_recipe.png)
+
+### Potion Charms
+
+After unlocking the corresponding Perk Tree node, `Familiar Fox Form` can craft `Healing`, `Harming`, and `Poison Potion Charms` directly in the inventory using mana to fire potion-infused charm arrows.
+
+## Shape Shifter Altar, Catalyst Cores & Form Tuner Beacon
+
+See the `Shape Shifter Altar & Catalyst Cores` and `Form Attuning & Perk Trees` sections for details.
 
 ## Form-Specific Tools and Trinkets
 
-See the `Form-Specific Tools and Trinkets` section for details.
+See the `Form Specific Tools And Trinkets` section for details.
 
 ## Morphscale Armors
 

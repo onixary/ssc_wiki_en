@@ -1,6 +1,7 @@
 site_name: Shape Shifter Curse Wiki
 nav:
     - Home: index.md
+    - Form Roadmap: form_roadmap.md
     - Versions:
         - Update Logs: update_log/update_log.md
     - Mod Content Guide: 
@@ -10,7 +11,10 @@ nav:
         - Transform Status Effect: mod_content/transform_status_effect.md
         - Form Types: mod_content/form_types.md
         - Form Ability Overview: mod_content/form_ability_overview.md
+        - Sub-Forms: mod_content/sub_forms.md
         - Form Change And Recovery: mod_content/form_change_and_recovery.md
+        - Shape Shifter Altar & Catalyst Cores: mod_content/shape_shifter_altar.md
+        - Form Attuning & Perk Trees: mod_content/form_attuner_and_perks.md
         - Morphscale Armors: mod_content/morphscale_armors.md
         - Form Specific Tools And Trinkets: mod_content/form-specific_tools_and_trinkets.md
         - Mod Config: mod_content/mod_config.md

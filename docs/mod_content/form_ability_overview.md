@@ -21,3 +21,13 @@
 6. **Jackal/Anubis Wolf**: A leader who summons a pack of wolf wraiths to fight and transforms the power of Wither into their own.
 
 7. **Spider**: A web weaver that uses special web projectiles and cobwebs to reshape terrain for rapid movement and trap enemies.
+
+### Sub-Forms
+
+1. **Avali (Bat Sub-Form)**: An alien raptor from another plane of existence🍐. What could have brought them here?
+
+2. **Marbled Polecat (Snow Fox Sub-Form)**: A nimble hunter with a long, slender body and a remarkably flexible neck.
+
+---
+
+All progressive forms upon reaching `Phase Permanent` (as well as the `Sub-Forms` above) can unlock dedicated Perk Trees via the `Form Tuner Beacon`. See `Form Attuning & Perk Trees` for details.

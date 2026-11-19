@@ -1,128 +1,114 @@
-# Form Definition JSON Configuration
+# Configure Form Definition JSON
 
-The form definition JSON file is used to configure animations, form types, body types, and other properties of custom forms
+A form definition JSON declares a custom form's identity, group and tier, behavior flags, body type, and state animations. Place it at:
 
-It needs to be placed in the `/data/example_namespace/ssc_form` directory, with the same name as your custom form ID
+`data/<namespace>/ssc_form/<form_name>.json`
 
-### Form Definition JSON Format
+This directory supports hot-reloading via `/reload`. Once loaded, test your form using `/shape_shifter_curse set_dynamic_form <player> <namespace>:<form_name>`.
+
+---
+
+## Full Example (1.10.0 Format)
 
 ```json
 {
-  "__comment__": "See PlayerFormBase for details",
-  "groupID": "example_namespace:example_group",
-  "__groupID_comment__": "Group ID used for registering groups, corresponding to the datapack structure",
-  "groupIndex": 5,
-  "__groupIndex_comment__": "Index within group used for transformation logic",
-  "phase": "PHASE_SP",
-  "__Phase_comment__": "Transformation phase usually matches groupIndex. Enum:[PHASE_CLEAR, PHASE_0, PHASE_1, PHASE_2, PHASE_3, PHASE_SP]",
+  "group": "example_namespace:example_group",
+  "group_weight": 1,
+  "tier": 1,
+  "fallback": "shape-shifter-curse:allay_sp",
   "bodyType": "FERAL",
-  "__BodyType_comment__": "Body type. Enum:[NORMAL, FERAL]",
-  "isCustomForm": true,
   "originID": "example_namespace:form_example",
-  "__originID_comment__": "OriginID works with the built-in Origin mod, corresponding to the origin layer name. **Must be registered in data/[NameSpace]/origins**",
   "originLayerID": "origins:origin",
-  "__originLayerID_comment__": "OriginLayerID works with OriginFur **Highly not recommended to modify**",
-  "hasSlowFall": false,
-  "overrideHandAnim": false,
-  "canSneakRush": false,
-  "canRushJump": false,
-  "anim": [
-    {
-      "state": "ANIM_IDLE",
-      "animID": "example_namespace:form_example_idle"
-    },
-    {
-      "state": "ANIM_SNEAK_IDLE",
-      "animID": "shape-shifter-curse:form_feral_common_sneak_idle"
-    }
+  "eyeScale": 0.6,
+  "flag": [
+    "no_instinct",
+    "no_cursed_moon_effect",
+    "special_form"
   ],
-  "__anim_comment__": "Animation list. State is defined in PlayerAnimState",
-  "animDefault": {
-    "animID": "shape-shifter-curse:form_feral_common_idle",
-    "speed": 1.0,
-    "fade": 2
+  "anim": {
+    "shape-shifter-curse:idle_state": {
+      "controllerType": "shape-shifter-curse:sneak_anim_controller",
+      "anim": { "animID": "example_namespace:form_example_idle" },
+      "sneakAnim": { "animID": "shape-shifter-curse:form_feral_common_sneak_idle" }
+    },
+    "shape-shifter-curse:walk_state": {
+      "controllerType": "shape-shifter-curse:sneak_anim_controller",
+      "anim": { "animID": "shape-shifter-curse:form_feral_common_walk", "speed": 1.2, "fade": 2 },
+      "sneakAnim": { "animID": "shape-shifter-curse:form_feral_common_sneak_walk" }
+    },
+    "shape-shifter-curse:jump_state": {
+      "controllerType": "shape-shifter-curse:one_anim_controller",
+      "anim": { "animID": "shape-shifter-curse:form_feral_common_jump" }
+    }
   },
-  "__animDefault_comment__": "Default animation. If not present, this key can be omitted"
+  "animDefault": {
+    "controllerType": "shape-shifter-curse:sneak_anim_controller",
+    "anim": { "animID": "example_namespace:form_example_idle" },
+    "sneakAnim": { "animID": "shape-shifter-curse:form_feral_common_sneak_idle" }
+  },
+  "powerAnim": {
+    "shape-shifter-curse:attach_side": {
+      "animID": "shape-shifter-curse:bat_3_attach_side"
+    }
+  },
+  "ExtraPower": [],
+  "RemovedPower": [],
+  "MasterForm": "shape-shifter-curse:feral_cat_sp",
+  "PerkTree": "shape-shifter-curse:empty"
 }
 ```
 
-The comment fields in the example should have explained the meaning of the corresponding fields. Below are additional explanations for some fields:
+> For a full 13-state animation reference, see [example.json](https://github.com/onixary/shape-shifter-curse-fabric/blob/master/custom_form_pack_example/example_form_datapack/data/example_namespace/ssc_form/example.json) in the repository.
 
-### groupID
+---
 
-Used to identify which group the current form belongs to
+## Core Fields
 
-Only forms under the same `groupID` with correctly registered `groupIndex` and `phase` can trigger the transformation logic normally of progressive forms.
-For example, `bat_0`, `bat_1`, `bat_2`, `bat_3` should all be in the `example_namespace:bat` group
+### Identity, Group & Tier
 
-### groupIndex and phase
+| Field | Description |
+| --- | --- |
+| `FormID` *(optional)* | Manually overrides the form ID. Usually omitted to default to `<namespace>:<filename>`. |
+| `group` | Group ID (e.g., `example_namespace:my_wolf`). Forms in the same group advance and revert across tiers together. |
+| `group_weight` | Selection weight within the same group and tier (usually `1`; set to `0` for forms like sub-forms that should not be picked randomly). |
+| `tier` | Stage number (replaces legacy `groupIndex` and `phase`). `Phase Initial / Phase 1 / Phase 2 / Phase Permanent` map to `1 / 2 / 3 / 4`; Special Forms usually use `1` with the `special_form` flag. |
+| `fallback` | Safe fallback form ID used automatically if the datapack is removed or the form becomes unavailable. |
 
-Identify the index within the group and transformation phase respectively, used for the transformation logic of progressive forms
+### Appearance & Power Binding
 
-They correspond one-to-one, with meanings and relationships as follows. Please refer to the table below to register the corresponding groupIndex and phase according to the stage of your desired custom form:
+| Field | Description |
+| --- | --- |
+| `bodyType` | `NORMAL` (humanoid) or `FERAL` (quadrupedal). Feral forms are recommended to reuse the built-in `form_feral_common_*` animations. |
+| `originID` | Linked Origin ID; must be registered in `data/<namespace>/origins/` and `origin_layers/origin.json`. |
+| `originLayerID` | Origin layer ID; keep `"origins:origin"` (not recommended to change). |
+| `eyeScale` | Rendered eye height scale (actual hitbox scaling must still be set via a `shape-shifter-curse:scale` power). |
+| `ExtraPower` / `RemovedPower` *(optional)* | Inline powers added directly to the form layer, or power IDs removed from the form. |
+| `MasterForm` *(optional)* | Master form ID to register this form as a **Sub-Form** selectable via the `Ripple Mirror`. |
+| `PerkTree` *(optional)* | Perk Tree ID attached to this form (omit or use `"shape-shifter-curse:empty"` if unused). |
 
-| groupIndex: |        -2         |        -1        |                       0                        |      1      |      2      |         3         |     5      |
-|:-----------:|:-----------------:|:----------------:|:----------------------------------------------:|:-----------:|:-----------:|:-----------------:|:----------:|
-|   phase:    |    PHASE_CLEAR    |   PHASE_CLEAR    |                    PHASE_0                     |   PHASE_1   |   PHASE_2   |      PHASE_3      |  PHASE_SP  |
-|    Form Stage:    | Form when mod content is not enabled, useless for custom | Placeholder for original form before transformation, useless for custom |        First stage of progressive forms        | Second stage of progressive forms | Third stage of progressive forms | Fourth stage of progressive forms, i.e., permanent stage | Special form that can be restored at any time |
+### Behavior Flags (`flag`)
 
-For example: `groupIndex` of `bat_0` should be set to `0`, and `phase` should be set to `PHASE_0`
+Version 1.10.0 uses the `flag` array to configure instinct, Cursed Moon, and inhibitor behavior:
 
-groupIndex 4 is currently unused, reserved for future special forms
+- `special_form`: Marks a Special Form (for advancements and special-form logic).
+- `no_instinct`: Hides the instinct bar and disables instinct gain (used for Special and Permanent Forms).
+- `lock_instinct`: Locks the instinct bar display (used for `Phase 2`).
+- `no_cursed_moon_effect` / `no_cursed_moon_tf_target`: Exempts the form from Cursed Moon effects or random Cursed Moon selection.
+- `inhibitor_resist` / `inhibitor_immune`: Resists regular Inhibitors / blocks all non-creative Inhibitors (used for Permanent Forms).
+- `initial_form`: Marks a `Phase Initial` form (allows reverting via Golden Apple).
 
-### bodyType
+---
 
-Humanoid is `NORMAL`, quadrupedal form is `FERAL`
+## Animation Configuration (`anim` / `animDefault` / `powerAnim`)
 
-This field only affects camera height and item rendering methods. Under `FERAL` bodyType, you need a complete set of animations to achieve the desired effect. It is recommended to reuse existing animations in the project to save effort
+Version 1.10.0 maps **FSM State IDs** to **Animation Controllers (`controllerType`)**:
 
-### isCustomForm
-
-Set to `true`. This field affects the command for changing forms. When `true`, it will appear in `set_custom_form` instead of `set_form`
-
-### originID
-
-This field needs to match the name in origin_layer
-
-A form needs to correspond to an origin, used to implement form abilities and link with the form model
-
-### anim
-
-Used to register animations for different states, where the `state` field corresponds to states in PlayerAnimState, and the `animID` field corresponds to your namespace name and exported animation JSON file name
-
-The currently implemented state enum can be found in [PlayerAnimState](https://github.com/onixary/shape-shifter-curse-fabric/blob/master/src/main/java/net/onixary/shapeShifterCurseFabric/player_animation/PlayerAnimState.java). The values and meanings are listed below:
-
-| state |         Meaning         |
-|:-----:|:-----------------------:|
-| ANIM_IDLE |        Standing still        |
-| ANIM_SNEAK_IDLE |        Sneaking idle        |
-| ANIM_WALK |         Moving         |
-| ANIM_RUN |         Sprinting         |
-| ANIM_JUMP |         Jumping         |
-| ANIM_FALL |         Falling         |
-| ANIM_CLIMB_IDLE |        Climbing idle        |
-| ANIM_CLIMB |        Climbing movement        |
-| ANIM_SWIM |        Swimming state        |
-| ANIM_SWIM_IDLE |        Idle in water        |
-| ANIM_BOAT_IDLE |        Boat idle        |
-| ANIM_RIDE_IDLE |        Riding idle        |
-| ANIM_ELYTRA_FLY |        Elytra flying        |
-| ANIM_CREATIVE_FLY |       Creative flight       |
-| ANIM_CRAWL |        Crawling movement        |
-| ANIM_CRAWL_IDLE |        Crawling idle        |
-| ANIM_SLOW_FALL |         Slow falling         |
-| ANIM_ATTACK_ONCE |    Attack once (click left button once)    |
-| ANIM_TOOL_SWING |   Swing tool (hold left button for mining, etc.)    |
-| ANIM_SNEAK_RUSH |   Sneak rush (used for ocelot form in vanilla)   |
-| ANIM_RUSH_JUMP | Rush jump (used for ocelot and axolotl forms in vanilla) |
-| ANIM_SLEEP |         Sleeping         |
-| ANIM_SNEAK_JUMP |      Jump while holding sneak       |
-| ANIM_SNEAK_FALL |      Falling while holding sneak       |
-| ANIM_SNEAK_ATTACK_ONCE |    Attack once while holding sneak (click left button once)|
-| ANIM_SNEAK_TOOL_SWING | Swing tool while holding sneak (hold left button for mining, etc.) |
-
-### animDefault
-
-Default animation. When no other animations are available, this animation will be played. Usually registered as the animation for the `ANIM_IDLE` state
-
-For `FERAL` bodyType, if this field is not registered, an upright posture will appear when stationary
+- **`anim`**: Keys are state IDs under `shape-shifter-curse:` (`idle_state`, `walk_state`, `sprint_state`, `jump_state`, `fall_state`, `swim_state`, `climb_state`, `mining_state`, `attack_state`, `ride_state`, `sleep_state`, `fall_flying_state`, `flying_state`).
+- **Common `controllerType` values**:
+  - `shape-shifter-curse:one_anim_controller`: Single animation (`anim`).
+  - `shape-shifter-curse:sneak_anim_controller`: Standing vs. sneaking (`anim`, `sneakAnim`).
+  - `shape-shifter-curse:swim_anim_controller`: Floating vs. swimming (`anim`, `swimAnim`).
+  - `shape-shifter-curse:ride_anim_controller`: Regular riding vs. vehicles (`anim`, `rideVehicleAnim`).
+  - `shape-shifter-curse:use_other_state_anim_controller`: Reuses another state's controller (`StateControllerId`).
+- **`animDefault`**: Fallback animation controller. Always configure this for `FERAL` forms so they do not revert to an upright pose.
+- **`powerAnim`** *(optional)*: Override animations triggered by specific powers (such as `shape-shifter-curse:attach_side`).

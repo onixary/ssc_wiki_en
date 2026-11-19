@@ -379,3 +379,45 @@ The new Spider Form is now available!
 2. Merged the latest Russian localization made by [MaxMobile-ru](https://github.com/MaxMobile-ru). Many thanks!
 
 3. Updated the mod wiki pages.
+
+### 1.10.0
+
+This is a major content and system overhaul featuring a rewritten transformation backend, Form Perk Trees & the Shape Shifter Altar, two new Sub-Forms, and extensive quality-of-life improvements.
+
+**Before Updating:**
+
+- Rendering dependency migrated from `AzureLib` to **`GeckoLib` (4.x; incompatible with 5.x)**, and the `Satin API` dependency has been removed. Only `Fabric API`, `Pehkui`, and `GeckoLib 4.x` are now required.
+- Added `Active Power (1)`–`(6)` keybinds, all **unbound by default**—remember to configure them in Controls.
+- Custom form datapack and resource pack formats have been upgraded (`ssc_form_model` and the new `animation_system`); legacy custom form packs must migrate to the new format.
+
+1. New Mid-to-Late-Game Progression: Shape Shifter Altar, Catalyst Cores & Perk Trees
+
+    Added the `Shape Shifter Altar`. The 13 base form trinkets now craft at the altar, alongside 8 reusable `Catalyst Cores`, 12 `+` upgraded trinkets/tools, `Morphscaled Food` crafted from any food item, and an altar route using the `Morphscale Catalyst Core` to grant morphscale properties to any armor or tool.
+
+    Added the `Form Tuner Beacon` and `Form Perk Trees`: all 7 Permanent Forms and 2 Sub-Forms now feature independent Perk Trees unlocked with experience points and `Glint Prisms` to expand abilities and offset form drawbacks.
+
+2. New Sub-Form System
+
+    Permanent `Bat` and `Snow Fox` forms can now craft a `Ripple Mirror` to open `The Mirror` interface and switch into new Sub-Forms—**Avali** and **Marbled Polecat**—and switch back to their main form anytime.
+
+3. Mechanics & Quality-of-Life Improvements
+
+    Rewrote the core transformation system with form history rollback, automatic fallback for unavailable forms, and server-side custom initial form configuration (`enableInitialForm`, `initialFormIds`, and gamerule `sscUseInitialForm`).
+
+    Unified phase naming to `Phase Initial / Phase 1 / Phase 2 / Phase Permanent`.
+
+    `Milk` no longer cures `Transformation Status Effects`; use `Golden Apples` or `Inhibitors` instead. Eating a `Golden Apple` in `Phase Initial` now reverts you back to your pre-transformation form.
+
+    Added eye-blinking animations and dark-glow emissive textures for multiple forms, refined quadrupedal footstep rhythms and animations, and added Chiseled Bookshelf support for the Book of Shape Shifter and form scrolls.
+
+    Balance adjustments: Axolotl's Water Explosion now triggers via `Active Power (1)` with updated values, Ocelot's Toggle Clip at Ledge moved to `Active Power (6)`, Diamond Mining Claw expanded into a multi-tool, Feral Cat mobility buffed, and several form scales tuned.
+
+4. Mod Compatibility & Localization
+
+    Added or improved compatibility with `Accessories`, `Tough As Nails`, `CarryOn`, `CustomPlayerModels`, `HT's TreeChop`, `Presence Footsteps`, `Biomes O' Plenty`, and multiple food mods, plus JEI/EMI recipe integration for the Shape Shifter Altar.
+
+    Added Korean localization contributed by [bedulge-sub](https://github.com/bedulge-sub), along with comprehensive completion and proofreading for British English (`en_gb`) and American English (`en_us`).
+
+5. Bug Fixes
+
+    Fixed multiplayer instinct bar desyncs, powers failing after relogging, Perks failing after respawning, small forms getting stuck on trapdoors, Axolotl swimming/chair issues, multiplayer tail & cape rendering issues, and several dedicated server crashes.

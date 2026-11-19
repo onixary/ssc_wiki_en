@@ -88,10 +88,26 @@ Unlike vanilla, Netherite Morphscale Armor upgrades and repairs only require `Ne
 
 # Morphscale Attribute Upgrade for Armors and Tools
 
-After version 1.8.1, you can add Morphscale attributes to any tools and armors added by other mods.
+After version 1.8.1, you can add Morphscale attributes to any tools and armors, including items added by other mods.
 
 Tools and armors with Morphscale attributes can be used and equipped by most forms regardless of restrictions. However, since compatibility cannot be ensured for all mod content, some armors may exhibit clipping issues.
 
-You need to use a `Morphscale Core` and a `Nether Star` in a Smithing Table to perform the Morphscale Attribute Upgrade.
+### Method 1: Smithing Table Upgrade
+
+Use a `Morphscale Core` and a `Nether Star` in a Smithing Table to apply the Morphscale Attribute Upgrade.
 
 ![morphscale_upgrade.png](../img/morphscale_upgrade.png)
+
+### Method 2: Shape Shifter Altar Upgrade (Added in 1.10.0)
+
+Starting from version 1.10.0, you can craft a `Morphscale Catalyst Core` at the `Shape Shifter Altar`.
+
+![morphscale_catalyst_core_recipe.png](../img/morphscale_catalyst_core_recipe.png)
+
+Place the `Morphscale Catalyst Core` in the altar's catalyst slot (**it is not consumed**), place a single piece of equipment into the 3×3 grid, and spend 32 `Untreated Moondust` to grant it the Morphscale attribute.
+
+![morphscale_upgrade_altar.png](../img/morphscale_upgrade_altar.png)
+
+!!! note
+
+    To allow any form to eat food regardless of dietary restrictions, you can also craft `Morphscaled Food` at the `Shape Shifter Altar`. See `Shape Shifter Altar & Catalyst Cores` for details.

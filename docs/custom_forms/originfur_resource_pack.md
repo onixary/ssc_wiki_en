@@ -1,79 +1,99 @@
 # Adding Custom Form Models and Animations
 
-## Important Note: Differences between Model Blockbench Projects and Animation Blockbench Projects
+Both custom form models and animations are created with [Blockbench](https://www.blockbench.net/).
 
-Custom animations and models both need to be created using [Blockbench](https://www.blockbench.net/)
+Starting from version 1.10.0, runtime rendering migrated to **GeckoLib 4.x**, so both models and animations should now be exported using Blockbench's **`GeckoLib Animation Utils`** plugin.
 
-Custom form models are based on the implementation of [Origin Furs](https://modrinth.com/mod/origin-furs), while form animations are based on the implementation of [playerAnimator](https://modrinth.com/mod/playeranimator)
+---
 
-The **facing direction** and **left/right naming** of the two models are different and cannot be mixed:
+## Important: Differences Between Model Projects and Animation Projects
 
-1. Form models face the +Z direction, while form animation models face the -Z direction
+Form models follow the Origin Furs bone hierarchy, while player animations are based on [playerAnimator](https://modrinth.com/mod/playeranimator). Because the two formats differ, **do not mix them**:
 
-2. In form models, the naming of leg bones is **reversed left and right**. This may be a legacy issue with Origin Furs itself, and since fixing it would cause errors, please maintain the current naming
+1. **Opposite Facing Axis**: Form models face **+Z**, whereas animation models face **-Z**.
+2. **Swapped Leg Bone Names**: Left and right leg bone names in form models are swapped (a legacy quirk from Origin Furs). Keep them as-is so legs render properly.
 
-It is recommended that you implement your own form models and animations by modifying existing [form model projects](https://github.com/onixary/shape-shifter-curse-fabric/blob/master/3d_models/player_form/axolotl/form_axolotl_2.bbmodel) and [form animation projects](https://github.com/onixary/shape-shifter-curse-fabric/blob/master/3d_models/player_form/0_common/feral_form/animation/form_feral_common_anim.bbmodel)
+It is strongly recommended to start from the repository's [form model template](https://github.com/onixary/shape-shifter-curse-fabric/blob/master/3d_models/player_form/axolotl/form_axolotl_2.bbmodel) and [feral animation template](https://github.com/onixary/shape-shifter-curse-fabric/blob/master/3d_models/player_form/0_common/feral_form/animation/form_feral_common_anim.bbmodel).
 
-## Adding Custom Models
+---
 
-The mod implements custom models for different forms based on the logic of [Origin Furs](https://modrinth.com/mod/origin-furs). Form models should be easily migratable from other Blockbench character models
+## 1. Configuring Custom Models (`ssc_form_model`)
 
-To add custom models for specific forms, please refer to the [Origin Furs documentation](https://originalfur.readthedocs.io/en/latest/) and the Blockbench project files in the source code [player_form directory](https://github.com/onixary/shape-shifter-curse-fabric/tree/master/3d_models/player_form)
+1. Export your `.geo.json` model with the GeckoLib plugin and place it in `assets/<namespace>/geo/`.
+2. Place your textures in `assets/<namespace>/textures/`.
+3. Create a model config JSON under `assets/<namespace>/ssc_form_model/` (replacing the legacy `assets/orif-defaults/furs/` directory), named `origins.origin.<namespace>.<origin_name>.json`.
 
-To export form models, you need to install the `AzureLib Animator` plugin in Blockbench and select `Export Azurelib.geo Model` when exporting
-
-### Registering Model Textures and Soft Bones
-
-The mod additionally implements soft bones for tails/ribbons and dynamic wings. These also need to be registered in the JSON file, as shown in the example below:
+### Model Config Example (1.10.0 Format)
 
 ```json
 {
-  "model": "orif-defaults:geo/form_allay_sp.geo.json",
-  "texture": "orif-defaults:textures/form_allay_sp/form_allay_sp.png",
-  "overlay": "orif-defaults:textures/form_allay_sp/form_allay_sp_overlay.png",
+  "load_priority": 0,
+  "name": "example_namespace.form_example.model_name",
+  "layer": "origins:origin",
+  "form": "example_namespace:form_example",
+  "wide_only": true,
+
+  "model": "example_namespace:geo/form_example.geo.json",
+  "texture": "example_namespace:textures/form_example.png",
   "hidden": [
-    "leftLeg",
-    "rightLeg",
-    "rightPants",
-    "leftPants",
-    "body",
-    "jacket"
+    "leftLeg", "rightLeg", "rightPants", "leftPants",
+    "leftSleeve", "rightSleeve", "leftArm", "rightArm",
+    "body", "jacket", "head", "hat"
   ],
-  "tail_chain": {
-    "tail_l": [0, 1, 2],
-    "tail_r": [0, 1, 2]
-  },
-  "wing_chain_l": {
-    "wing_l": [0, 1]
-  },
-  "wing_chain_r": {
-    "wing_r": [0, 1]
-  },
-  "tail_chain_head": {
-    "head_tail_l": [0, 1],
-    "head_tail_r": [0, 1]
+
+  "animation_system": "shape-shifter-curse:default",
+  "animation_system_config": {
+    "tail": {
+      "chain": {
+        "tail": [0, 1, 2, 3]
+      }
+    },
+    "head_tail": {
+      "chain": {
+        "ear_l": [0],
+        "ear_r": [0]
+      }
+    },
+    "wing_l": {
+      "chain": {
+        "wing_l": [0, 1]
+      }
+    },
+    "wing_r": {
+      "chain": {
+        "wing_r": [0, 1]
+      }
+    },
+    "eye_blink": {
+      "eye": "eyeRoot",
+      "open_scale": 1.0,
+      "close_scale": 0.01
+    }
   }
 }
 ```
 
-`tail_chain`: Soft bone chain for tails/ribbons with trunk as parent
+### Key Fields
 
-`tail_chain_head`: Soft bone chain for head attachments with head as parent
+- **`layer` / `form`**: Matches the datapack Origin layer (`origins:origin`) and Origin ID (`example_namespace:form_example`).
+- **`hidden`**: Vanilla player model parts to hide.
+- **`animation_system` & `animation_system_config`** (new in 1.10.0):
+  - `tail`: Soft-bone chains parented to the torso (tails, ribbons).
+  - `head_tail`: Soft-bone chains parented to the head (ears, tufts).
+  - `wing_l` / `wing_r`: Left and right wing bone chains.
+  - `eye_blink`: Automatic eye-blinking config; add an `eyeRoot` bone under `bipedHead` in your model.
+  - Ensure all bones in a chain share a consistent naming prefix (e.g., `tail_0`, `tail_1`, `tail_2`).
 
-`wing_chain_l` and `wing_chain_r`: Bone chains for wings, differentiated by left and right
+!!! note
 
-Ensure that all bone prefix names in a bone chain in Blockbench remain consistent
+    **Migration Notice**: Legacy top-level `tail_chain`, `wing_chain_l`, and `builtin_controller_data` fields from 1.9.2 and earlier are **no longer read in 1.10.0** (tails and wings will silently stop animating). Migrate them to `animation_system` + `animation_system_config`.
 
-## Adding Custom Animations
+---
 
-## Special Note: As of now (2026.03.11), the animation export format of the AzureLib Animator plugin in Blockbench 5 version has an issue where the rotation X and Y axes are inverted. As an alternative, please use the Geckolib plugin to create animations instead, as its animation format is consistent with the AzureLib plugin.
+## 2. Adding Custom Player Animations
 
-The mod implements custom animations for different forms based on the method of [playerAnimator](https://modrinth.com/mod/playeranimator)
+1. Install the **GeckoLib** plugin in Blockbench, open an [existing animation template](https://github.com/onixary/shape-shifter-curse-fabric/blob/master/3d_models/player_form/0_common/feral_form/animation/form_feral_common_anim.bbmodel), author your keyframe animations in the `Animate` tab, and export.
+2. Place exported animation JSON files in `assets/<namespace>/player_animation/`.
+3. Reference the animation IDs inside `anim`, `animDefault`, or `powerAnim` of your form definition JSON (`ssc_form/*.json`).
 
-To add custom animations, you also need to install the `AzureLib Animator` plugin in Blockbench and refer to the [existing animation project](https://github.com/onixary/shape-shifter-curse-fabric/blob/master/3d_models/player_form/0_common/feral_form/animation/form_feral_common_anim.bbmodel), creating frame animations in the `Animate` tab that appears in the upper right corner
-
-Your animation JSON files should be placed under `assets/example_namespace/player_animation`
-
-After creation and export, you also need to register in the [JSON configuration file](https://ssc-wiki.readthedocs.io/zh-cn/latest/custom_forms/form_definition_json/)
-
-It is recommended that you first reuse animations already implemented in the mod, and only create your own when there is no suitable animation
+Reuse the mod's built-in animations (such as `shape-shifter-curse:form_feral_common_*`) whenever possible and only author custom animations where needed.

@@ -1,33 +1,25 @@
 # Overview
 
-Please first check the relevant examples in the [GitHub repository](https://github.com/onixary/shape-shifter-curse-fabric/tree/master/custom_form_pack_example)
+Please start by checking the complete example datapack and resource pack in the [GitHub Repository](https://github.com/onixary/shape-shifter-curse-fabric/tree/master/custom_form_pack_example).
 
-Starting from version 1.0.71, the custom form system of this mod has been further improved.
-Now you can achieve complete customization of **form models**, **form abilities**, and **action animations** through **datapacks** + **resource packs**
+Starting from version 1.10.0, the mod's underlying form and model animation systems were rewritten. Using a **datapack** + **resource pack**, you can flexibly create custom forms, sub-forms, models and animations, powers, dynamic form potions, and trinket effects.
 
-If you have added custom forms in older versions before, you should be able to easily upgrade them to the new version by referring to the content of this chapter
+!!! note
+
+    **Migration Notice for Pre-1.10.0 Pack Authors:**
+    Version 1.10.0 introduced breaking format updates to form definition JSONs (`ssc_form`), model config paths (moved to `ssc_form_model`), soft-bone animation configs (moved to `animation_system`), and several tag namespaces. Legacy custom form packs must migrate following this section.
 
 ---
 
-**What you can do with resource packs/datapacks:**
+### What You Can Do with Resource Packs / Datapacks
 
-- Add brand new custom forms, specifying form types (phase-changing forms/special forms) and body types (humanoid/feral)
+- **Define Full Custom Forms or Sub-Forms**: Configure form groups, tiers, weights, body types (humanoid/feral), behavior flags, and fallback forms via `ssc_form`, register sub-forms via `MasterForm`, or attach a `PerkTree`.
+- **Add Transformation Entry Points**: Attach transformation triggers via `origins_power_extra`, apply custom transformation status effects via `give_custom_transform_effect`, and register custom form brewing recipes via `dynamic_brewing_recipes`.
+- **Customize Models & Animations**: Configure GeckoLib models, color masks, emissive textures, eye-blinking bones, and soft-bone chains via `ssc_form_model`, and bind `playerAnimator` state animations.
+- **Customize Powers & Trinket Effects**: Write abilities with Apoli / Origins syntax, add or remove powers directly in form JSONs via `ExtraPower` / `RemovedPower`, and define form-specific trinket bonuses via `accessory_power`.
+- **Custom Codex Text**: Customize form names, descriptions, pros, cons, and instinct entries in the Book of Shape Shifter via `lang` and `rich_lang`.
 
-- Implement transformation to custom forms under specific conditions through origins_power_extra
+### Current Limitations
 
-- Apply different state animations to custom forms
-
-- Customize models for new forms or override models of existing forms, including soft bone effects
-
-- Customize various abilities (powers) for new forms or override abilities of existing forms
-
-- Customize descriptions of certain forms in the Shape Shifter's Book through localization files
-
-
-**Some limitations of the current custom form system:**
-
-- Cannot yet add transformation effects from vanilla forms to custom forms
-
-- Cannot yet add form potions for custom forms
-
-- Cannot yet add special mobs that grant transformation effects for custom forms
+- Standalone custom transformative mob entities cannot be added through datapacks alone (however, you can grant custom transformation effects through powers listening to hit or interaction events).
+- Dynamic datapack forms still require the `shape-shifter-curse:scale` power to control hitbox scaling (paired with `eyeScale` in the form JSON for rendered eye height).

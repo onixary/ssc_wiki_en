@@ -12,6 +12,8 @@ Visit the Modrinth and CurseForge pages for more information.
 
 This mod is open-source and free. You can find the [GitHub project here](https://github.com/onixary/shape-shifter-curse-fabric).
 
+To see completed and upcoming forms, check out the [Form Roadmap](form_roadmap.md).
+
 !!! note
 
     As this is a side project with limited development time, future updates will focus on adding more content to the current version (1.20.1) rather than prioritizing adaptation to newer versions.  

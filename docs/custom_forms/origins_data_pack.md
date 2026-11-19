@@ -1,142 +1,151 @@
-# Adding Custom Form Abilities
+# Adding Custom Form Powers
 
-The mod uses the logic of [Origins](https://modrinth.com/mod/origins) to define different abilities for different forms. In other words, each form corresponds to a separate origin in Origins
+The mod defines form abilities using the Apoli / Origins power system—each form corresponds to an Origin defined under `data/<namespace>/origins/` and registered in `data/origins/origin_layers/origin.json`.
 
-To define abilities for custom forms, please refer to the [Origins documentation](https://origins.readthedocs.io/en/latest/)
+For general power syntax, please refer to the [Origins Documentation](https://origins.readthedocs.io/en/latest/).
 
-In addition, the mod has additionally added some powers and actions related to specific mechanisms for use
+!!! note
+
+    **1.10.0 Namespace Migration Tips:**
+    - Use the `apoli:` prefix for Power, Action, and Condition types (`origins:` types remain compatible for now, though future versions plan to phase them out).
+    - Diet, weapon, and block tags (such as `fish`, `meat`, `raw_meat`, and `ignore_diet`) have migrated to the **`shape-shifter-curse:`** namespace (e.g., `shape-shifter-curse:fish`).
 
 ---
 
-## Transformation Trigger Powers Mounted on Existing Forms
+## 1. Adding Transformation Entry Points
 
-### Mounting Transformation Powers
+You can let players enter your custom form in survival through any combination of the following methods:
 
-To trigger transformation through in-game conditions, you first need to mount your own transformation power in the `custom_form_pack_example/example_form_datapack/data/example_namespace/origins_power_extra` directory
+### 1. Attach Transformation Trigger Powers (`origins_power_extra`)
 
-```
+Create a JSON file under `data/<namespace>/origins_power_extra/` to attach extra powers to an existing form (such as the default post-book form `shape-shifter-curse:form_original_shifter`):
+
+```json
 {
+  "TargetLayerID": "origins:origin",
   "TargetOriginsID": "shape-shifter-curse:form_original_shifter",
   "ExtraPowers": [
-    "example_namespace:to_example_form"
+    "example_namespace:to_example_form",
+    "example_namespace:to_example_form_by_effect"
   ]
 }
 ```
 
-In the above example, the power `example_namespace:to_example_form` will be mounted under the form `shape-shifter-curse:form_original_shifter`
+Then implement the trigger power in `data/<namespace>/powers/`. For example, use `shape-shifter-curse:transform_to_form` for direct transformation:
 
-This way, when you are in the `form_original_shifter` form, you can trigger the transformation effect implemented in the power `to_example_form`
-
-If you implement your own basic form instead of reusing the basic forms in the mod, you can skip the mounting step and directly implement the transformation power in your own basic form
-
-### Implementation of Transformation Powers
-
-After mounting in JSON, you need to implement your own transformation power
-
-Like other powers, transformation powers need to be placed in the `custom_form_pack_example/example_form_datapack/data/example_namespace/powers` directory
-
-You can find all current form IDs [here](https://github.com/onixary/shape-shifter-curse-fabric/tree/master/src/main/resources/data/shape-shifter-curse/origins)
-
-Use the `shape-shifter-curse:transform_to_form` action to trigger the transformation logic:
-
-```
+```json
 {
-  "type": "origins:action_on_item_use",
+  "type": "apoli:action_on_item_use",
   "entity_action": {
     "type": "shape-shifter-curse:transform_to_form",
     "form_id": "example_namespace:example",
     "instant": true
   },
   "item_condition": {
-    "type": "origins:ingredient",
+    "type": "apoli:ingredient",
     "ingredient": {
-      "tag": "origins:fish"
+      "tag": "shape-shifter-curse:fish"
     }
   }
 }
 ```
 
-In the above example, when a player eats any fish, `shape-shifter-curse:transform_to_form` will be triggered, transforming the player into the `example_namespace:example` form
+Or use `shape-shifter-curse:give_custom_transform_effect` to apply a custom transformation status effect (triggering transformation the next time the player sleeps):
 
-Since you have registered the power to be mounted under the `form_original_shifter` form, this power will only take effect when in that form
+```json
+{
+  "type": "apoli:self_action_when_hit",
+  "entity_action": {
+    "type": "shape-shifter-curse:give_custom_transform_effect",
+    "form_id": "example_namespace:example"
+  },
+  "damage_condition": {
+    "type": "apoli:attacker",
+    "entity_condition": {
+      "type": "apoli:in_tag",
+      "tag": "example_namespace:attack_to_example_effect_entity"
+    }
+  }
+}
+```
+
+### 2. Add a Custom Form Potion (`dynamic_brewing_recipes`)
+
+Create a JSON file under `data/<namespace>/dynamic_brewing_recipes/` to register a brewing stand recipe for your form:
+
+```json
+{
+  "type": "potion",
+  "input": "shape-shifter-curse:moondust_potion",
+  "ingredient": "minecraft:bone",
+  "output": "shape-shifter-curse:to_custom_statue_potion",
+  "target_form": "example_namespace:example"
+}
+```
+
+### 3. Custom Trinket Effects (`accessory_power`)
+
+Create a JSON file under `data/<namespace>/accessory_power/` to add or remove powers when specific trinkets are equipped in your custom form (see [accessory_power/example.json](https://github.com/onixary/shape-shifter-curse-fabric/blob/master/custom_form_pack_example/example_form_datapack/data/example_namespace/accessory_power/example.json) in the repository).
 
 ---
 
-## Mod-Specific Powers and Actions:
+## 2. Common Mod-Specific Powers and Actions
 
-### Instinct System Related
+### 1. Instinct System
 
-These powers and actions are used to interact with the mod's instinct system, used to increase or decrease instinct values under specific conditions
+#### `add_sustained_instinct` (Continuous Instinct Change)
 
-#### add_sustained_instinct
-      
-Power used to continuously increase or decrease instinct
-
-When the `instinct_effect_id` field of a power duplicates with an existing power, the later loaded power will overwrite the existing power
-
-The following example implements continuously increasing instinct values at a rate of 0.003 per tick when the player is in the Lush Caves biome
+If two powers share the same `instinct_effect_id`, the later one overrides the earlier one. Example adding +0.003 instinct per tick while in Lush Caves:
 
 ```json
-    {
-      "type": "shape-shifter-curse:add_sustained_instinct",
-      "instinct_effect_id": "FORM_AXOLOTL_BIOME",
-      "value": 0.003,
-      "duration": 1,
-      "condition": {
-        "type": "origins:biome",
-        "biome": "minecraft:lush_caves"
-      }
-    }
+{
+  "type": "shape-shifter-curse:add_sustained_instinct",
+  "instinct_effect_id": "FORM_AXOLOTL_BIOME",
+  "value": 0.003,
+  "duration": 1,
+  "condition": {
+    "type": "apoli:biome",
+    "biome": "minecraft:lush_caves"
+  }
+}
 ```
 
-#### add_instinct
-      
-Action to increase or decrease instinct once
+#### `add_instinct` (One-Time Instinct Action)
 
-The following example implements increasing instinct value by 0.1 per tick for 20 ticks each time a player eats raw fish. That is, increasing 2 instinct values within 1 second
+Example adding +0.1 instinct per tick for 20 ticks (+2 total) when eating fish:
 
 ```json
-    {
-      "type": "origins:action_on_item_use",
-      "entity_action": {
-        "type": "shape-shifter-curse:add_instinct",
-        "instinct_effect_id": "FORM_AXOLOTL_EAT_FISH",
-        "value": 0.1,
-        "duration": 20
-      },
-      "item_condition": {
-        "type": "origins:ingredient",
-        "ingredient": {
-          "tag": "origins:fish"
-        }
-      }
+{
+  "type": "apoli:action_on_item_use",
+  "entity_action": {
+    "type": "shape-shifter-curse:add_instinct",
+    "instinct_effect_id": "FORM_AXOLOTL_EAT_FISH",
+    "value": 0.1,
+    "duration": 20
+  },
+  "item_condition": {
+    "type": "apoli:ingredient",
+    "ingredient": {
+      "tag": "shape-shifter-curse:fish"
     }
+  }
+}
 ```
 
-Generally speaking, for the 0th and 1st stages of "phased transformation forms", it is necessary to include powers related to [golden apples](https://github.com/onixary/shape-shifter-curse-fabric/blob/master/src/main/resources/data/shape-shifter-curse/powers/form_instinct_use_golden_apple.json) and [catalysts](https://github.com/onixary/shape-shifter-curse-fabric/blob/master/src/main/resources/data/shape-shifter-curse/powers/form_instinct_use_catalyst.json). Of course, you can also freely define your own instinct items
+For `Phase Initial` and `Phase 1` of progressive forms, consider reusing the built-in [Golden Apple](https://github.com/onixary/shape-shifter-curse-fabric/blob/master/src/main/resources/data/shape-shifter-curse/powers/form_instinct_use_golden_apple.json) and [Catalyst](https://github.com/onixary/shape-shifter-curse-fabric/blob/master/src/main/resources/data/shape-shifter-curse/powers/form_instinct_use_catalyst.json) instinct powers.
 
----
+### 2. Player Scaling (`scale`)
 
-### Character Scaling Related:
-   
-You can adjust character size scaling through the `scale` power, this scaling will not affect form movement speed, jump height, and other attributes
-
-The `eye_scale` field is used to define camera height scaling
-   
-Each form **must** contain a `scale` power, otherwise size confusion may occur when transforming forms
+Dynamic datapack forms require `shape-shifter-curse:scale` to control hitbox scale (without altering movement speed or jump height), paired with `eyeScale` in `ssc_form/*.json`:
 
 ```json
 {
   "type": "shape-shifter-curse:scale",
-  "scale": 0.5,
+  "scale": 0.55,
   "eye_scale": 0.6
 }
 ```
 
----
+### 3. Additional Custom Powers and Actions
 
-### Other Specific Powers and Actions:
-   
-Custom powers, actions, and conditions used by various forms in the mod are all in the source code [additional_power](https://github.com/onixary/shape-shifter-curse-fabric/tree/master/src/main/java/net/onixary/shapeShifterCurseFabric/additional_power) directory, no further elaboration here
-
-Feel free to refer to and reuse them
+All custom powers, actions, and conditions added by the mod (including active skill keys `key.shape-shifter-curse.active_skill_1`–`_6`) can be browsed in the [additional_power](https://github.com/onixary/shape-shifter-curse-fabric/tree/master/src/main/java/net/onixary/shapeShifterCurseFabric/additional_power) directory of the source repository.

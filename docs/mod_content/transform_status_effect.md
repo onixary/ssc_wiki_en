@@ -73,3 +73,11 @@ You need the `Familiar Fox Form Potion` to obtain the Familiar Fox transformatio
 Instead, when encountering witches while in `Initial Form`, witches have a chance to throw this potion at you, granting the effect. Witches may also drop `Splash Familiar Fox Form Potion`.
 
 Snow Fox Form, as a variant of Familiar Fox Form, also has a corresponding `Snow Fox Form Potion` that cannot be brewed directly. Instead, you need to purify the `Splash Familiar Fox Form Potion` that witches may drop by using a `Gold Nugget` in a brewing stand.
+
+---
+
+# Curing Transformation Status Effects
+
+Starting from version 1.10.0, **drinking `Milk` no longer cures `Transformation Status Effects`**.
+
+If you do not want to transform the next time you sleep, use a `Golden Apple` (regular or enchanted) or an `Inhibitor` to remove the effect.

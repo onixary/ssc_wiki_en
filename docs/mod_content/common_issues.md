@@ -1,32 +1,55 @@
 ### FAQ:
 
-**My character skin got replaced?**  
-After enabling the mod content, the player's character skin will be replaced by the mod's built-in character skin (aka. the shifter). This is done to maintain artistic consistency for the form models and respect the original character designs of other players.
+**The game fails to launch after updating to 1.10.0 because of missing GeckoLib?**
 
-You can retain your own skin by using the in-game command: `/shape-shifter-curse keep_original_skin true`
+In version 1.10.0, the rendering dependency migrated from `AzureLib` to **`GeckoLib` (4.x required; incompatible with 5.x)**, and `Satin API` is no longer required.
 
-**Does it work on multiplayer servers?**  
-Yes!  
-After version 1.0.5, the mod has achieved full server compatibility. If you encounter any problems, please submit an issue report.
+Please install `GeckoLib 4.x` and `Pehkui` (alongside Fabric API). `AzureLib` and `Satin API` can be removed.
 
-**I don't like the firstPerson visual effect**  
-After version 1.0.62, form models can display correctly without FirstPerson mod(though we still recommend FirstPerson mod for enhanced immersion).
+**How do I trigger active form abilities (such as Water Explosion or Perk skills)?**
 
-**Can I create custom forms?**  
-Yes. While there are some limitations, you can customize your own forms using data packs combined with resource packs. This includes custom models, unique abilities, instinct system modifications, and descriptive text.  
+Version 1.10.0 adds `Active Power (1)` through `Active Power (6)` keybinds, which are **unbound by default**. Go to `Controls → Key Binds`, find the Shape Shifter Curse category, and assign your preferred keys.
 
-Please refer to the wiki documentation and examples in the source code repository.
+**Why doesn't Milk cure Transformation Status Effects anymore?**
 
-**How do I transform into other forms?**  
-During the mod's progression system, you can obtain transformation clues through the achievement system and crafting recipes.  
-If you still have questions after this, please consult the wiki documentation.
+Starting from version 1.10.0, `Milk` no longer cures `Transformation Status Effects`. Use a `Golden Apple` (regular or enchanted) or an `Inhibitor` instead.
 
-**Are any forms permanent?**  
-Several permanently retained forms were added starting from version 1.0.4.  
-Please refer to the mod documentation for specific details.
+**Why can't I craft form trinkets in a Crafting Table anymore?**
 
-**I accidentally lost the Book of Shape Shifter**  
-You can craft a new one using Untreated Moondust + Book.
+Starting from version 1.10.0, the 13 base form trinkets moved to the `Shape Shifter Altar`. See the `Shape Shifter Altar & Catalyst Cores` section for details.
 
-**Is this mod SFW?**  
-Absolutely!
+**My character skin was replaced?**
+
+After enabling mod content, your skin is replaced with the mod's built-in skin (a.k.a. *the shifter*) for visual consistency with form models and out of respect for custom characters.
+
+You can restore your own skin using `/shape_shifter_curse keep_original_skin true`.
+
+**Does this work on multiplayer servers?**
+
+Yes! Server compatibility has been supported since version 1.0.5. If you encounter any issues, please open an issue on GitHub.
+
+**I don't like the First-person Model mod's perspective**
+
+Since version 1.0.62, form arms render properly in vanilla first-person view (though First-person Model is still recommended for stronger immersion).
+
+**Can I create my own custom forms?**
+
+Yes! You can create custom forms using a datapack + resource pack, including custom models, abilities, instinct mechanics, form potions, and codex text.
+
+Please refer to the `Creating Custom Forms` section of this wiki and the example pack in the repository (note: version 1.10.0 updated the custom form and model config formats; older packs must migrate accordingly).
+
+**How do I transform into other forms?**
+
+You can follow the in-game advancements and recipes for guidance, or check the wiki pages if you get stuck.
+
+**Are some forms permanent?**
+
+Yes, permanent forms were introduced in version 1.0.4. Reaching Permanent Phase unlocks each form's Perk Tree, and certain forms can also switch into Sub-Forms.
+
+**I accidentally lost my Book of Shape Shifter**
+
+You can craft a new one using `Untreated Moondust` + `Book`.
+
+**Is this mod SFW?**
+
+Of course!

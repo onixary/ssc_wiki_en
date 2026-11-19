@@ -1,10 +1,12 @@
 # Form Types
 
-The forms you can transform into in the mod are categorized as Progressive Forms, Special Forms, and Permanent Forms.
+The forms you can transform into in the mod are categorized into `Progressive Forms`, `Special Forms`, `Permanent Forms`, and `Sub-Forms`.
 
 # Progressive Forms
 
-`Progressive Forms` feature multiple gradually changing stages. For these forms, as your `Instinct Value` accumulates, your form will advance to the next stage.
+`Progressive Forms` feature multiple gradually changing stages. Starting from version 1.10.0, stages are named `Phase Initial`, `Phase 1`, `Phase 2`, and `Phase Permanent`.
+
+For these forms, as your `Instinct Value` accumulates, your form will advance to the next stage.
 
 Compared to earlier stages, later stages have more pronounced advantages and disadvantages, creating more significant changes to the gameplay experience.
 
@@ -22,21 +24,23 @@ The `Instinct System` progress bar appears in the center of the screen, just bel
 
 When `Instinct Value` reaches maximum, your form will advance to the next stage.
 
+In `Phase 2`, the instinct bar becomes locked (use an `Echo Catalyst` to advance to Permanent Phase). In `Phase Permanent` or `Special Forms`, the instinct bar is automatically hidden.
+
 ### Progressive Forms List
 
-- Ocelot Form stages 1, 2, and 3
+- Ocelot Form (Phase Initial / Phase 1 / Phase 2)
 
-- Axolotl Form
+- Axolotl Form (Phase Initial / Phase 1 / Phase 2)
 
-- Bat Form stages 1, 2, and 3
+- Bat Form (Phase Initial / Phase 1 / Phase 2)
 
-- Familiar Fox Form stages 1, 2, and 3
+- Familiar Fox Form (Phase Initial / Phase 1 / Phase 2)
 
-- Snow Fox Form stages 1, 2, and 3
+- Snow Fox Form (Phase Initial / Phase 1 / Phase 2)
 
-- Jackal Form stages 1, 2, and 3
+- Jackal Form (Phase Initial / Phase 1 / Phase 2)
 
-- Spider Form stages 1, 2, and 3
+- Spider Form (Phase Initial / Phase 1 / Phase 2)
 
 # Special Forms
 
@@ -52,9 +56,11 @@ While in a `Special Form`, you can use an `Inhibitor` at any time to revert to y
 
 # Permanent Forms
 
-`Permanent Forms` are the final stages of certain `Progressive Forms`.
+`Permanent Forms` are the final stage (`Phase Permanent`) of `Progressive Forms`.
 
-For a `Progressive Form` that has a corresponding `Permanent Form`, use an `Echo Catalyst` at stage 3 to transform into the corresponding permanent form.
+For a `Progressive Form` that has a corresponding `Permanent Form`, use an `Echo Catalyst` during `Phase 2` to transform into the corresponding permanent form.
+
+Once in a permanent form, you can use a `Form Tuner Beacon` to unlock its dedicated `Perk Tree`. See `Form Attuning & Perk Trees` for details.
 
 **Important Warning: Once transformed into a Permanent Form, there are no in-game mechanics to revert this change. Proceed with caution!**
 
@@ -62,18 +68,26 @@ For a `Progressive Form` that has a corresponding `Permanent Form`, use an `Echo
 
     Q: I regret my decision! Are there really no other solutions?
 
-    A: Yes, there are options! With administrator permissions, you can use the `/shape-shifter-curse transform_to_form` command to set your form. Alternatively, you can delete the save file named after your UUID under `<world_name>\data\shape-shifter-curse` to restore your form to the state before enabling mod content.
+    A: Yes, there are options! With administrator permissions, you can use `/shape_shifter_curse transform_to_form` to set your form, or use a `Creative Inhibitor` in Creative mode to revert.
 
 ### Permanent Forms List
 
-- Ocelot Form stage 4
+- Ocelot Form (Phase Permanent)
 
-- Bat Form stage 4
+- Axolotl Form (Phase Permanent)
 
-- Familiar Fox Form stage 4
+- Bat Form (Phase Permanent)
 
-- Snow Fox Form stage 4
+- Familiar Fox Form (Phase Permanent)
 
-- Jackal Form stage 4
+- Snow Fox Form (Phase Permanent)
 
-- Spider Form stage 4
+- Jackal Form (Phase Permanent)
+
+- Spider Form (Phase Permanent)
+
+# Sub-Forms
+
+Certain forms can switch to a corresponding `Sub-Form` via a `Ripple Mirror` after reaching `Phase Permanent`, and can switch back to their main form at any time.
+
+See the `Sub-Forms` section for details.
